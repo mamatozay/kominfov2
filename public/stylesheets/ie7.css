@@ -1,0 +1,6 @@
+/* ie7 hacks */
+html .header_menu{		height: 1%;	}
+.portfolio_boxes ul li,
+.recently_boxes ul li{	background:none !important; }
+.header_effect{			width:960px;	}
+.sign_up h6 {			padding:20px 70px; margin-bottom:20px; }

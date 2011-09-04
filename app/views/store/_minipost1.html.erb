@@ -1,0 +1,23 @@
+<!-- 
+<div class="preview" style="height:150px;"> 							
+    <div class="picture">
+        <div class="alpha">
+            <%= link_to image_tag("uploads/2011/07/gb1.jpg"), {:size => "280x150"}, :id => "gb1", :href => image_path("uploads/2011/07/gb1.jpg"), :title => "Kegiatan 1" %>
+        </div>
+        <div class="date">01 Juli, 2011</div>
+    </div>
+</div>
+<div class="title"><a href="simple.html">Kegiatan 1</a></div>
+<div class="description">Keterangan singkat kegiatan 1 di kota Makassar.</div> 
+-->
+
+<!-- begin page data -->		
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+		
+<% @postsMinipost1.each do |dopost| %>
+	<div class="title"><%= link_to truncate(strip_tags(dopost.title), :length => 100), dopost %></div>
+	<%= truncate(strip_tags(dopost.content), :length => 300) %>
+<% end %>
+<!-- end page data -->

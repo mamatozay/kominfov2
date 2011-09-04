@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Komunikasi dan Informatika Kota Makassar</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag "settings" %>
+  <%= javascript_include_tag "jquery.min" %>
+  <%= javascript_include_tag "jquery.easing.1.3" %>
+  <%= javascript_include_tag "jquery.nivo.slider" %>
+  <%= javascript_include_tag "jquery.kwicks-1.5.1" %>
+  <%= javascript_include_tag "jquery.flashgateway" %>
+  <%= javascript_include_tag "jquery.tweet" %>
+  <%= javascript_include_tag "swfobject" %>
+  <%= javascript_include_tag "flashobject" %>
+  <%= javascript_include_tag "jquery.codestar.1.0" %>
+  <%= javascript_include_tag "fancybox/jquery.fancybox-1.3.4.pack" %>
+  <%= javascript_include_tag "fancybox/jquery.mousewheel-3.0.4.pack" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+
+
+<!-- begin header effect and dark line -->
+<div class="header_line"></div>
+<!-- begin header -->
+<div style="clear:both; width:960px; height:150px;  border-bottom:1px solid #e1e1e1;   margin-left: auto; margin-right: auto;  margin-top: 1px; margin-bottom: 0px;">
+	<!-- begin flash header -->
+	<%= swf_tag "header1" %>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+			jQuery("a#example5").fancybox();
+			jQuery("a#gb1").fancybox();
+			jQuery("a#gb2").fancybox();
+			jQuery("a#gb3").fancybox();
+		});
+	</script>
+<!-- end flash header -->
+	
+	<script type="text/javascript">
+	//	var tag = new FlashTag('images/swf/header1.swf', 960, 165, '9,0,0');  
+	//	tag.setFlashvars('xmlSource=3d_slider.xml&amp;cssSource=/stylesheets/piecemaker.css');  
+	//	tag.setId('myFlashContent');  
+	//	tag.write(document);
+	</script>
+</div> 
+<!-- end header -->
+
+
+<div class="header_effect"></div>
+<!-- end header effect and dark line -->
+
+<!-- begin header -->
+<div class="header_wrap">
+
+	<!-- begin quicktags -->
+	<div class="header_quicktags">
+		
+		<!-- tooltip begin -->
+		<div class="tooltip_content">
+			<div class="tooltip_arrow"></div>
+			<div class="tooltip_text"></div>
+		</div>
+		<!-- tooltip end -->
+
+	</div>
+	<!-- end quicktags -->
+
+	<!-- begin header container -->
+	<div class="header_container clearfix">
+
+		<!-- begin menu -->
+		<div class="header_menu">
+			<ul>
+				<li><%= link_to "Home", store_path %></li>
+				
+				<li><a href="#">Profil Dinas</a>
+					<ul class="sub-menu">
+						<li><%= link_to "Sambutan Kepala Dinas", content_menu2_1_path %></li>
+						<li><%= link_to "Kata Pengantar Redaksi", content_menu2_2_path %></li>
+						<li><%= link_to "Sejarah Dinas", content_menu2_3_path %></li>
+						<li><%= link_to "Visi dan Misi", content_menu2_4_path %></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Sekretariat</a>
+					<ul class="sub-menu">
+						<li><%= link_to "Struktur Organisasi", content_menu3_1_path %></li>
+						<li><%= link_to "Regulasi Perizinan", content_menu3_2_path %></li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Bidang Kerja</a>
+					<ul class="sub-menu">
+						<li><%= link_to "Bidang Pengembangan Informasi, Aplikasi dan Telematika", content_menu4_1_path %>
+							<ul class="sub-menu">
+								<li><%= link_to "Seksi Pengembangan Media", content_menu4_1_1_path %></li>
+								<li><%= link_to "Seksi Aplikasi dan Telematika", content_menu4_1_2_path %></li>
+								<li><%= link_to "Seksi Pengolahan Data, Informasi dan Monitoring", content_menu4_1_3_path %></li>
+							</ul>
+						</li>
+						<li><%= link_to "Bidang Pos dan Telekomunikasi", content_menu4_2_path %>
+							<ul class="sub-menu">
+								<li><%= link_to "Seksi Teknik Pos dan Komunikasi", content_menu4_2_1_path %></li>
+								<li><%= link_to "Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi", content_menu4_2_2_path %></li>
+								<li><%= link_to "Seksi Pengembangan dan Pengawasan", content_menu4_2_3_path %></li>
+							</ul>
+						</li>
+						<li><%= link_to "Bidang Pendayagunaan Media", content_menu4_3_path %>
+							<ul class="sub-menu">
+								<li><%= link_to "Seksi Pendayaguaan Media Cetak dan Elektronik", content_menu4_3_1_path %></li>
+								<li><%= link_to "Seksi Pelayanan Media Publik", content_menu4_3_2_path %></li>
+								<li><%= link_to "Seksi Pendayagunaan Media Pameran / Promosi", content_menu4_3_3_path %></li>
+							</ul>
+						</li>
+						<li><%= link_to "Bidang Pemberdayaan Kelembagaan Informasi", content_menu4_4_path %>
+							<ul class="sub-menu">
+								<li><%= link_to "Seksi Pembinaan Kelembagaan", content_menu4_4_1_path %></li>
+								<li><%= link_to "Seksi Usaha Produktif Kelembagaan", content_menu4_4_2_path %></li>
+								<li><%= link_to "Seksi Pengawasan Kelembagaan", content_menu4_4_3_path %></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				
+				<li><a href="#">Pelayanan Masyarakat</a>
+					<ul class="sub-menu">
+						<li><%= link_to "Pembuatan Perizinan", content_menu5_1_path %></li>
+						<li><%= link_to "Pelayanan Kependudukan", content_menu5_2_path %></li>
+						<li><%= link_to "Pelayanan Sosial Masyarakat", content_menu5_3_path %></li>
+						<li><%= link_to "Pelayanan Informasi", content_menu5_4_path %></li>
+					</ul>
+				</li>
+				
+				<li><%= link_to "Kontak Kami", content_menu6_1_path %><li>
+				
+			</ul>
+		</div>		
+		<!-- begin menu -->
+
+	</div>
+	<!-- end header container -->
+
+	<div class="header_menu_line"><div class="header_menu_cline"></div></div>
+	
+</div>
+<!-- end header --> 
+
+<div class="page_wrap">
+	<div class="portfolio_boxes"> 
+		<ul>
+			<li style="margin-right:40px; margin-bottom:0px;">  
+				<!-- begin slider -->
+				<script type="text/javascript">
+					jQuery(document).ready(function() { 
+						jQuery(window).load(function() { 
+							jQuery('#slider_2').nivoSlider({controlNav:true, directionNav:true, pauseTime:5000, controlNavW:85, controlNavP:200, effect:'random', slices:15, pauseOnHover:true}); 
+						}); 
+					});
+				</script>
+
+				<div style="width:450px; height:300px;  border-bottom:1px solid #e1e1e1;   margin: 5px 0px 20px 0px;">
+					
+					<div id="slider_2" class="nivoShow nivoSlider" style="clear:both; width:450px; height:300px;">
+						<div><%= image_tag("uploads/2011/07/gb1.jpg", :size => "280x150", :alt => "Edit Entry") %></div>
+						<div><%= image_tag("uploads/2011/07/gb2.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 2</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 2 di Makassar.</span></span></div>
+						<div><%= image_tag("uploads/2011/07/gb3.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 3</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 3 di Makassar.</span></span></div>
+						<div><%= image_tag("uploads/2011/07/gb4.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 4</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 4 di Makassar.</span></span></div>
+						<div><%= image_tag("uploads/2011/07/gb1.jpg", :size => "280x150", :alt => "Edit Entry") %></div>
+					</div>
+					
+					<div class="hide_desc"></div>
+					<div class="full_shadow">&nbsp;</div>
+
+				</div>   
+				<!-- end slider -->
+			</li>
+
+				<!-- begin item --> 
+				<li style="margin-bottom:0px;" class="last"> 
+					
+					<div class="content" style="width:450px;"> 
+	
+						<div class="preview" style="height:300px;"> 
+							
+							<div class="picture"> 
+								
+								<div class="alpha"> 
+ 
+ 									<%= link_to image_tag("uploads/2011/07/gb_walikota_makassar.jpg"), {:size => "450x300"}, :id => "example5", :href => image_path("uploads/2011/07/gb_walikota_makassar.jpg"), :title => "Walikota dan Wakil Kota Makassar" %> 
+								
+								</div> 
+								
+								<div class="date">05 Juli, 2011</div> 
+								
+							</div> 
+							
+						</div> 
+ 
+						<div class="title"><a href="simple.html">Walikota dan wakil kota Makassar</a></div> 
+						<div class="description">Keterangan...</div> 
+					
+					</div> 
+					
+				</li> 
+				<!-- end item --> 	
+			</ul>
+		</div>
+</div>
+
+<!-- begin page -->
+<div class="page_wrap">
+  <div class="page_title">
+		<!--<h2>Beranda</h2>-->
+	</div>
+		
+	
+		<!-- begin portfolio boxes --> 
+		<div class="portfolio_boxes"> 
+		
+			<ul> 
+ 
+				<!-- begin item --> 
+				<li style="margin-right:40px; margin-bottom:0px;"> 					
+					<div class="content" style="width:280px;"> 	
+					  <%= render :partial => "store/minipost1", :collection => @postsMinipost1 %>
+					</div> 					
+				</li> 
+				<!-- end item --> 
+				
+				<!-- begin item --> 
+				<li style="margin-right:40px; margin-bottom:0px;"> 
+					
+					<div class="content" style="width:280px;"> 
+	
+						<div class="preview" style="height:150px;"> 
+							
+							<div class="picture"> 
+								
+								<div class="alpha"> 
+ 
+									<%= link_to image_tag("uploads/2011/07/gb2.jpg"), {:size => "280x150"}, :id => "gb2", :href => image_path("uploads/2011/07/gb2.jpg"), :title => "Kegiatan 2" %> 
+									
+								</div> 
+								
+								<div class="date">02 Juli, 2011</div> 
+								
+							</div> 
+							
+						</div> 
+ 
+						<div class="title"><a href="simple.html">Kegiatan 2</a></div> 
+						<div class="description">Keterangan singkat kegiatan 2 di kota Makassar.</div> 
+					
+					</div> 
+					
+				</li> 
+				<!-- end item --> 
+				
+				<!-- begin item --> 
+				<li style="margin-bottom:0px;" class="last"> 
+					
+					<div class="content" style="width:280px;"> 
+	
+						<div class="preview" style="height:150px;"> 
+							
+							<div class="picture"> 
+								
+								<div class="alpha"> 
+ 
+									<%= link_to image_tag("uploads/2011/07/gb3.jpg"), {:size => "280x150"}, :id => "gb3", :href => image_path("uploads/2011/07/gb3.jpg"), :title => "Kegiatan 3" %> 
+									
+								</div> 
+								
+								<div class="date">03 Juli, 2011</div> 
+								
+							</div> 
+							
+						</div> 
+ 
+						<div class="title"><a href="simple.html">Kegiatan 3</a></div> 
+						<div class="description">Keterangan singkat kegiatan 3 di kota Makassar.</div> 
+					
+					</div> 
+					
+				</li> 
+				<!-- end item -->  
+			</ul> 
+ 
+		</div> 
+		<!-- end portfolio boxes --> 
+		
+		<!-- divider hr --> 
+		<div class="divider_hr" style="padding-top:20px; margin-bottom:20px;">&nbsp;</div> 
+		
+
+	<!-- begin bottom up -->
+	<div class="bottom_up_wrap">
+
+		<!-- begin bottom top container -->
+		<div class="bottom_up_container">
+			
+			<!-- begin twitter feed -->
+			<div class="twitter_icon">
+			
+				<div class="twitter_ticker">
+					<div class="tweetLoading"><h6>just a sec, loading tweets...</h6></div>
+				</div>
+
+			</div>
+			<!-- end twitter feed -->
+
+		</div>
+		<!-- begin bottom top container -->
+		
+	</div>
+	<!-- end bottom up -->
+
+	<!-- begin page content -->
+	<div class="page_container alignleft sidebar">
+		
+		<!-- begin page text contents -->
+		<div id="main">
+			<%= yield %>
+		</div>		
+		<!-- end page text contents -->
+	</div>
+	<!-- end page content -->	
+
+	<!-- begin sidebar -->
+	<div class="page_sidebar alignright">
+		
+		<!-- begin text widget -->
+		<div class="page_sidebar_widget widget_text">
+		
+			<h4>Informasi Singkat Kota Makassar</h4>
+			
+			<div class="textwidget">
+				<p>Makassar merupakan Ibukota dari Propinsi Sulawesi Selatan<br />
+				<ul>
+					<li>Berhadapan langsung dengan pantai Losari</li>
+					<li>Jumlah penduduk 1.251.493 jiwa</li>
+					<li>Luas wilayah 175.79 km2</li>
+					<li>Kepadatan penduduk 7,119 jiwa/m2</li>
+					<li>Terdiri dari 14 kecamatan dan 143 kelurahan</li>
+					<li>Berjarak 24 km dari Bandara Hasanuddin</li>
+					<li>Pelabuhan Soekarno-Hatta merupakan pelabuhan utama</li>
+					<li>Bahasa sehari-hari menggunakan bahasa Indonesia</li>
+					<li>Mayoritas penduduk memeluk agama Islam</li>
+					<li>Iklim tropis dengan dua musim (hujan dan kemarau)</li>
+					<li>Temperatur rata-rata 26' C (minimum 21,9' C and maximum 33' C)</li>
+					<li>Merupakan kota terbesar di wilayah Timur Indonesia</li>
+				</ul>
+				</p>
+			</div>
+			
+		</div>
+		<!-- begin text widget -->		
+	</div>
+	<!-- end sidebar -->
+
+</div>
+<!-- end page -->
+
+<div class="sticky_footer"></div>
+
+<!-- begin bottom footer -->
+<div class="bottom_wrap">
+		
+	<!-- begin footer -->
+	<div class="footer">
+		
+		<!-- begin footer container -->
+		<div class="footer_container">
+		
+			<!-- begin footer model 1 -->
+			<div class="footer_columns model1">
+
+				<!-- begin footer column 1 -->
+				<div class="footer_column column_1">
+					<div class="footer_list widget_text">
+						<div class="textwidget">
+							<p><div><%= image_tag("uploads/2011/04/admin_logo.png", :size => "50x50", :alt => "Edit Entry", :class => "alignleft") %></div><span class="justify">Website Komunikasi dan Informatika Kota Makassar dibangun sebagai salah satu media komunikasi buat komunitas muda kota makassar.</span></p>
+						</div>
+					</div>				
+				</div>
+				<!-- end footer column 1 -->
+				
+				<!-- begin footer column 2 -->
+				<div class="footer_column column_2">
+				
+					<!-- begin footer recent posts widget -->
+					<div class="footer_list widget_custom_recent_entries">
+						<div class="title"><h5>Video</h5></div> 
+						<ul>
+							<li class="recent_post">
+								<a href="simple.html" title="Lorem Ipsum">
+									<span class="recent_post_thumb image_frame_effect">
+										<%= image_tag("uploads/2011/04/wallpapers/160x100/41.png", :size => "60x60", :alt => "") %>
+									</span>
+									<div class="recent_post_title">
+									<h6>Lorem Ipsum</h6>
+									</div>
+								</a>
+								<span class="recent_post_date">April 29, 2011</span>
+							</li>
+							<li class="recent_post">
+								<a href="simple.html" title="Lorem Ipsum">
+									<span class="recent_post_thumb image_frame_effect">
+										<%= image_tag("uploads/2011/04/wallpapers/160x100/41.png", :size => "60x60", :alt => "") %>
+									</span>
+									<div class="recent_post_title">
+									<h6>Lorem Ipsum</h6>
+									</div>
+								</a>
+								<span class="recent_post_date">April 29, 2011</span>
+							</li>
+						</ul>
+					</div>
+					<!-- end footer recent posts widget -->
+					
+				</div>
+				<!-- end footer column 2 -->
+				
+				<!-- begin footer column 3 -->
+				<div class="footer_column column_3">
+				
+					<!-- begin footer comment widget -->
+					<div class="footer_list widget_recent_comments">
+						<div class="title"><h5>Artikel Terkini</h5></div>
+							
+							<%= render :partial => "store/footer", :collection => @postsMain %>				
+							
+					</div>
+					<!-- end footer comment widget -->
+
+				</div>
+				<!-- end footer column 3 -->
+			
+				<!-- begin footer column 4 -->
+				<div class="footer_column column_4 last">
+					
+					<!-- begin footer links widget -->
+					<div class="footer_list widget_links">
+						<div class="title"><h5>Link Terkait</h5></div>
+						<ul class='xoxo blogroll'>
+							<li><a href="http://bipnewsroom.info/">BADAN INFORMASI PUBLIK</a></li>
+							<li><a href="http://www.makassarkota.go.id/">PEMKOT MAKASSAR</a></li>
+							<li><a href="http://www.sulsel.go.id/">PEMPROV. SULSEL</a></li>
+							<li><a href="http://www.depkominfo.go.id/">KEMENTRIAN KOMINFO RI</a></li>
+							<li><a href="http://www.bppimakassar.web.id/">BBPPKI Makassar</a></li>
+							<li><a href="http://kominfo-center.blogspot.com/">Blog KOMINFO Kota MAKASSAR</a></li>
+						</ul>
+					</div>
+					<!-- end footer links widget -->
+					
+				</div>
+				<!-- end footer column 4 -->
+
+			</div>
+			<!-- end footer model 1 -->
+			
+			<!-- begin footer informations -->
+			<div class="footer_info">
+				
+				<span class="alignleft">Copyright &copy; 2010 - 2011 Komunikasi dan Informatika Kota Makassar<br />All Rights Reserved	</span>
+				<!--
+				<span class="alignright">Take a look at me via <a href="http://facebook.com/" target="_blank">Facebook</a>, <a href="http://twitter.com/Codestarlive" target="_blank">Twitter</a> and <a href="http://dribbble.com/Codestar" target="_blank">Dribbble</a></span>
+				-->
+			</div>
+			<!-- end footer informations -->
+			
+		</div>
+		<!-- begin footer container -->
+
+	</div>
+	<!-- end footer -->
+	
+</div>
+<!-- end bottom footer -->
+
+<div class="cleardiv"></div>
+
+<%= javascript_include_tag "jquery.register.1.0" %>
+
+</body>
+</html>

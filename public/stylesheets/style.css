@@ -1,0 +1,627 @@
+/* 
+-------------------------------------------
+	CSS MAP
+-------------------------------------------
+A)  HEADER STYLES
+	1.  Header Line & Effect
+	2.	Header QuickTags
+	3.	Header Search Module
+	4.	Header Container
+	5.	Header Menu
+	6.	Header Line
+
+B)	SLIDER STYLES
+	1. CodeStar Slider Styles (Codeslide)
+	2. Nivo Slider Styles
+	3. Kwick Slider Styles
+
+C)	INTRO STYLES
+	1. Home Page Intro Text
+
+D)	HOME BOXES & RECENTLY STYLES
+	1. Recently Module
+	2. Home Boxes
+
+E)  FOOTER STYLES
+	1. Twitter Style	
+	2. Quickly Support Style
+	3. Footer Widget Columns
+	4. Footer Copyright
+	
+F)  PAGE STYLES
+	1. Page Style
+	2. Page Widgets Style
+	
+G)  PORTFOLIO STYLES
+	1. Portfolio Style
+	2. Filterable Style
+	
+H)  BLOG STYLES
+	1. Blog Style
+	
+I)  PLUGIN STYLES
+	1. Widget Pages
+	2. Pagenavi Style
+	3. Comment Style
+	4. Calendar Style
+	5. Contact Form Shortcode
+	6. Tag Cloud Widget
+	7. Footer List Style
+	8. Breadcrumb Style
+J)  OTHER STYLES
+	1. Others
+	2. Typography (h1,h2,etc)
+*/
+
+/*	
+	A) GENERAL LAYOUT
+-------------------------------------------
+	1. Header Line & Effect
+-------------------------------------------
+*/
+.header_line{				width:100%;	height:5px;	}
+.header_effect{				z-index:-1;	width:100%; text-align:center;	position:absolute;	min-height:250px;	}
+.header_wrap{				width:960px;	margin:0 auto; 	padding:10px 0;	position:relative;	z-index:10; }
+
+/*	
+-------------------------------------------
+	2. Header QuickTags
+-------------------------------------------
+*/
+.header_quicktags{			float:right;	margin-bottom:-50px;	position:relative;	z-index:9;	}
+.header_quicktags ul li{		list-style:none;	float:left;	margin-left:10px;	}
+.header_icon{				margin:5px;	cursor:pointer;	}
+span.tooltip{				display:none;	}
+.dribbble{					margin-top:-3px;	}
+.tooltip_text{				padding:5px;	font-size:11px;	text-align:center;	width:125px;			}
+.tooltip_content{			position:absolute;	padding:5px;	z-index:9;	display:none;	}
+.tooltip_arrow{				border-width:0 5px 5px; border-style: solid; font-size:0; line-height:0; height:0; width:0; margin:0 auto; }
+
+/*	
+-------------------------------------------
+	3. Header QuickTags
+-------------------------------------------
+*/
+.header_icon_seach{				min-width:30px;	min-height:35px;	padding-left:10px; }
+.header_search_button{			background:transparent url(../images/icons/search.png); border:0 !important; cursor: pointer; font-size:0; line-height:0; height: 24px; position: absolute; text-indent: -9999em; right: 5px; top: 5px; width: 22px; padding:0 !important;  }
+.header_search_button:hover{	background:url(../images/icons/search.png) no-repeat 0 -26px scroll transparent;	}
+.header_search_input{			display:none;	color: #ccc !important;	float: left;	width:1px;	height: 14px; font-size:11px;	line-height:14px;	padding: 10px 30px 10px 10px !important;	border: 1px solid #f1f1f1 !important;	background:#fff none! important;}
+.header_search_input:focus{		border: 1px solid #ddd;	}
+
+/*	
+-------------------------------------------
+	4. Header Container
+-------------------------------------------
+*/
+.header_container{				display:block;	width:960px;	margin:0 auto;	}
+
+/*	
+-------------------------------------------
+	5. Header Menu
+-------------------------------------------
+*/
+.header_container .header_menu ul li{				z-index:10;	display:inline;	float:left;	padding-bottom:15px;	position:relative;	text-align:left; }
+.header_container .header_menu ul li ul{			position: absolute;	left: 0;	visibility: hidden;	}
+.header_container .header_menu ul li ul li{			display: list-item;	float: none;	padding:0;	font-weight:normal;	margin:5px 0;	font-size:11px;	}
+.header_container .header_menu ul li a{				padding:0 10px;	padding-bottom:20px;	}
+.header_container .header_menu ul li ul li a{			padding:10px; display:block; }
+.header_container .header_menu ul li ul li ul{			top: 0;	}
+
+/*	
+-------------------------------------------
+	6. Header Line
+-------------------------------------------
+*/
+.header_menu_line{				height:1px;	width:960px;	margin:0 auto; margin-top:-5px;	font-size:0;	line-height:0;	}
+.header_menu_cline{				z-index:0;	width:0;	height:1px;	font-size:0;	line-height:0;	position:absolute;	}
+
+
+
+/*	
+	B) SLIDER STYLES
+-------------------------------------------
+	1. CodeStar Slider Styles (Codeslide)
+-------------------------------------------
+*/
+.no_slide img{				float:left;  }
+.no_slide{					margin:20px auto 0 auto; width:960px; height:350px; padding-bottom:20px; }
+
+.codeslide{					background:#f1f1f1 url(../images/ajax_loader.gif) no-repeat 50% 50%;	position:relative;	}
+.codeslide ul{				list-style:none;}
+.codeslide ul li{				display:none;	}
+.codeslide ul li.current{		display:block;	}
+
+.nums{						text-align:center;	margin:10px auto 0 auto;	display:none;	width:100%;}
+.nums ul{					display: inline-block;	margin: 0 auto;	vertical-align: top;	}
+.nums ul li{					float:left;	width:12px;	height:13px;	cursor:pointer;	list-style:none;	margin-right:5px;	line-height:14px;	text-indent:-9999px;	background:url(../images/slider_nums.png) no-repeat;	}
+.nums ul li.active{			background:url(../images/slider_nums.png) no-repeat 0 -13px;	}
+
+.next, .prev {				z-index:1;	width:23px;	height:24px;	cursor:pointer;	position:absolute;	text-indent:-9999px;	display:none;	background:url(../images/prev_next.png) no-repeat; }
+.prev{						left:10px; }
+.next{						background-position:-23px 0px;	right:10px; }
+.prev:hover{				background-position:0 -24px;	}
+.next:hover{				background-position:-23px -24px;	}
+/*	
+-------------------------------------------
+	2. Nivo Slider Styles
+-------------------------------------------
+*/
+.nivoShow {					position:relative; background:#f1f1f1 url(../images/ajax_loader.gif) no-repeat 50% 50%; }
+.nivoShow img {				position:absolute;	top:0;	left:0;	display:none;	}
+.nivoShow a {				border:0;	display:block;	}
+
+.nivo-controlNav {			position:absolute;	bottom:-30px;	}
+.nivo-controlNav a {			position:relative;	z-index:9;	cursor:pointer; display:block;	width:13px;	height:13px;	background:url(../images/slider_nums.png) no-repeat;	text-indent:-9999px;	border:0;	margin-right:5px;	float:left;	}
+.nivo-controlNav a.active {	background-position:0 -13px;	}
+.nivo-directionNav a {		position:absolute;	top:45%;	z-index:9;	cursor:pointer; display:block;	width:23px;	height:24px;	background:url(../images/prev_next.png) no-repeat;	text-indent:-9999px;	border:0;	}
+a.nivo-nextNav {				background-position:-23px 0;	right:15px;	}
+a.nivo-nextNav:hover {		background-position:-23px -24px;	}
+a.nivo-prevNav:hover{		background-position:0 -24px;	}
+a.nivo-prevNav {				left:15px;	}
+ 
+.nivoSlider {				position:relative;	}
+.nivoSlider img {				position:absolute;	top:0;	left:0;	}
+.nivoSlider a.nivoLink {		position:absolute;	top:0;	left:0;	width:100%;	height:100%;	border:0;	padding:0;	margin:0;	z-index:6;	display:none;	}
+.nivo-slice {				display:block;		position:absolute;	z-index:5;	height:100%;	}
+.nivo-caption {				position:absolute;	left:0;	bottom:0;	background:#000;	color:#fff;	opacity:0.8; width:100%;		z-index:8;	}
+.nivo-box {					display:block;		position:absolute;	z-index:5;	}
+
+.hide_desc { 				position:absolute; z-index:9;  margin-top:-100px; }
+.holder_desc { 				display:none;  }
+.ntitle {  					float:left; background:#fff; color:#333; display:inline-block; padding:10px;	}
+.ndescription { 				clear:both; float:left; background:#333; color:#fff; display:inline-block; padding:10px;	}
+/*	
+-------------------------------------------
+	3. Kwick Slider Styles
+-------------------------------------------
+*/
+.kwicks img {				float:none !important;	border:0; display:none;}
+.kwicks {				background-color:#f1f1f1;	list-style: none;	position: relative;	margin: 0;	padding: 0;	top: 0;	left: 0;	}
+.kwicks li{				float: left; margin: 0;	position: relative;	display: block;	overflow: hidden;	padding: 0;	background: url(../images/ajax_loader.gif) 50% 50% no-repeat;	}
+.kwick_shadow {			height:100%; z-index: 1;	position: absolute;	right: 0px;	width: 25px;		background: url(../images/overlay.png) repeat-y;	}
+.last .kwick_shadow{		background: none !important;	}
+
+.kwick_title{			width: 100%;	z-index: 1;	float: left;	height: 20px;	position: absolute;	overflow: hidden;	left: 0px;	bottom: 0px;	padding: 15px;	}
+.kwick_desc {			bottom: -300px;	width: 100%; z-index: 2;	padding: 15px;	color:#555;	position: absolute;}
+.kwick_desc_title {		display: block;	font-size: 23px;	line-height: 23px;	padding-bottom: 5px;	color:#fff;	font-family:Arial;	}
+
+
+
+/*	
+	C) INTRO STYLES
+-------------------------------------------
+	1. Home Page Intro Text
+-------------------------------------------
+*/
+.intro_text{				width:960px;	margin:0 auto;	}
+.intro_content{				width:100%;	float:left;	padding:20px 0 10px 0; }
+
+
+
+/*	
+	D) HOME BOXES & RECENTLY STYLES
+-------------------------------------------
+	1. Recently Module
+-------------------------------------------
+*/
+.homebox_wrap{									width:960px;	margin:0 auto;	}
+
+.recently{										float:left;	margin-top:30px; padding-bottom:30px; width:960px; }
+.recently .intro{								float:left;	width:182px;	}
+.recently .intro .title{							background:url(../images/icons/recently.png) left 2px no-repeat;	padding-left:25px;	}
+.recently .intro .text{							width:100%;	margin-top:10px;	}
+.recently .items{								float:left;	width:768px;	margin-left:10px;	}
+
+.recently .categories ul{							float:left;	margin-bottom:9px;	list-style:none; }
+.recently .categories ul li{						float:left;	font-weight:bold; 	position:relative;	}
+.recently .categories ul li a{						 padding:0 10px; }
+
+.categories_line{								height:1px;	font-size:0;	line-height:0;	clear:both;	}
+.categories_cline{									height:1px;	font-size:0;	line-height:0;	position:absolute;	}
+
+.recently_boxes{								float:left;	clear:both; margin-top:10px; 	font-size:11px; }
+.recently_boxes ul{								float:left; display:none; list-style:none;	}
+.recently_boxes ul li{								float:left;	display:none; 	padding-bottom:9px;	margin-right:13px;	background:url(../images/right_shadow.png) bottom right no-repeat;	}
+.recently_boxes .first,
+.recently_boxes .first li{						display:block; 	}
+.recently_boxes .clear_li{						background: none !important;	clear: both;	font-size: 0;	line-height: 0;	width: 100%;	}
+.recently_boxes .picture{						top:0;	left: 0;	position: absolute;	width:100%; }
+.recently_boxes .content{						width:170px;	padding:5px;	float:left;		background-color:#fff;	border:1px solid #eeeeee;	}
+.recently_boxes .preview {						height:110px; 	display: block; overflow: hidden;	position: relative;	width: 100%;	}
+.recently_boxes .preview img {					width:170px; height:110px;	}
+.recently_boxes .title{							font-weight:bold; clear:both; 	padding-right:15px; background:url(../images/icons/view.png) right 7px no-repeat; }
+.recently_boxes .date{							float:left;		margin-top:0;	padding-left:15px;	padding-bottom:2px;	color:#999;	background:url(../images/icons/date.png) left center no-repeat;	}
+
+.recently_boxes ul.first li{						margin-right:13px;	}
+
+
+/*	
+-------------------------------------------
+	2. Home Boxes
+-------------------------------------------
+*/
+.home_cboxes{									float:left;	margin-top:30px; clear:both;	width:960px;	}
+.home_cboxes .one_cbox{							float:left;	width:300px; margin-right:30px;}
+.home_cboxes .one_cbox .title{					float:left;	padding-bottom:5px;	width:100%; }
+.home_cboxes .one_cbox .title .icon{ 				float:left;	margin-right:5px;	margin-top:-8px; width:36px; height:36px; display:block; background-image:url(../images/icons/box_title_icons.png); }
+.home_cboxes .one_cbox .title .box_icon1{ 		background-position:0 0; }
+.home_cboxes .one_cbox .title .box_icon2{ 		background-position:0 -36px; }
+.home_cboxes .one_cbox .title .box_icon3{ 		background-position:0 -72px; }
+.home_cboxes .one_cbox .title .box_icon4{ 		background-position:0 -108px; }
+.home_cboxes .one_cbox .title .box_icon5{ 		background-position:0 -144px; }
+.home_cboxes .one_cbox .title .box_icon6{ 		background-position:0 -180px; }
+.home_cboxes .one_cbox .title .box_icon7{ 		background-position:0 -216px; }
+.home_cboxes .one_cbox .title .box_icon8{ 		background-position:0 -252px; }
+.home_cboxes .one_cbox .title .box_icon9{ 		background-position:0 -288px; }
+.home_cboxes .one_cbox .title .box_icon10{ 		background-position:0 -324px; }
+.home_cboxes .one_cbox .title .box_icon11{ 		background-position:0 -360px; }
+.home_cboxes .one_cbox .title .box_icon12{ 		background-position:0 -396px; }
+.home_cboxes .one_cbox .title .box_icon13{ 		background-position:0 -432px; }
+.home_cboxes .one_cbox .title .box_icon14{ 		background-position:0 -468px; }
+.home_cboxes .one_cbox .title .box_icon15{ 		background-position:0 -504px; }
+.home_cboxes .one_cbox .title .box_icon16{ 		background-position:0 -540px; }
+.home_cboxes .one_cbox .title .box_icon17{ 		background-position:0 -576px; }
+.home_cboxes .one_cbox .title .box_icon18{ 		background-position:0 -612px; }
+.home_cboxes .one_cbox .title .box_icon19{ 		background-position:0 -648px; }
+.home_cboxes .one_cbox .title .box_icon20{ 		background-position:0 -684px; }
+.home_cboxes .one_cbox .title .box_icon21{ 		background-position:0 -720px; }
+.home_cboxes .one_cbox .title .box_icon22{ 		background-position:0 -756px; }
+.home_cboxes .one_cbox .title .box_icon23{ 		background-position:0 -792px; }
+.home_cboxes .one_cbox .title .box_icon24{ 		background-position:0 -828px; }
+.home_cboxes .one_cbox .title .box_icon25{ 		background-position:0 -864px; }
+.home_cboxes .one_cbox .title .box_icon26{ 		background-position:0 -900px; }
+.home_cboxes .one_cbox .title .box_icon27{ 		background-position:0 -936px; }
+.home_cboxes .one_cbox .title .box_icon28{ 		background-position:0 -972px; }
+.home_cboxes .one_cbox .title .box_icon29{ 		background-position:0 -1008px; }
+
+
+.home_cboxes .one_cbox .text{ 					float:left; padding-top:10px;	}
+
+.home_custom{									float:left;	margin-top:20px;	width:100%;	}
+.home_custom .home_custom_title{					float:left;	padding-bottom:5px;	margin-bottom:20px;	width:100%;	}
+.home_custom .home_custom_content{				float:left;	padding-bottom:20px;	width:100%;	}
+
+.clearcboxes{									float:left;	clear:both;	margin:20px 0;	font-size: 0;	line-height: 0;	width: 100%;	}
+
+
+/*	
+	E) FOOTER STYLES
+-------------------------------------------
+	1. Twitter Style
+-------------------------------------------
+*/
+.sticky_footer{			clear:both;	display:block; width:100%; }
+.bottom_wrap{			float:left;	clear:both;	margin-top:40px;	width:100%;	}
+.bottom_up_wrap{		float:left; clear:both;		width:100%;	}
+.bottom_up_container{	width:960px;	margin:0 auto;	min-height:80px;	}
+
+.twitter_icon {			width:700px;	margin:10px 0;	float:left;	padding-left:40px;	background:url(../images/icons/twitter_feed.png) left center no-repeat;	}
+.twitter_ticker{		height:50px;		}
+.twitter_ticker ul{		margin-top:10px;	list-style:none; position: absolute; top: 0px;		}
+.twitter_ticker ul li h6{	padding-bottom:20px;	}
+.tweetLoading{			margin-top:10px;}
+
+/*	
+-------------------------------------------
+	2. Quickly Support Style
+-------------------------------------------
+*/
+.quickly_support img{		float:right;	margin-left:5px;	}
+.quickly_support{			float:right;	cursor:pointer;	width:200px;	padding-left:10px;	text-align:right;	margin-top:10px;	padding-top:10px;	}
+.quickly_container{			clear:both;		width:960px;	margin:20px auto;	display:none;	}
+.quickly_content{			float:left;		width:100%;	}
+.quickly_content_left{		float:left;		width:320px;	}
+.quickly_content_right{		float:right;	width:600px; }
+.quickly_elements_left{		float:left; 	width:45%;	}
+.quickly_elements_right{	float:right; 	width:50%;	}
+.quickly_elements_label{	float:left; 	margin-bottom:15px; 	width:100%;	}
+.quickly_submit{			float:right;	}
+.quickly_required{			font-size:10px; font-style:italic; }
+.quickly_form_message{		display:none;	margin:7px;	font-size:11px;	}
+.quickly_close_container{	float:left;	clear:both; 	width:100%; 	margin-top:20px; 	height:50px;	}
+.quickly_close{				background: url(../images/exit.png) no-repeat scroll 0 0 transparent;	   clear: both;	   cursor: pointer;	   height: 49px;	margin: 0 auto;	width: 49px;	}
+.quickly_close:hover{		background: url(../images/exit.png) no-repeat scroll 0 -51px transparent;	}
+
+/*	
+-------------------------------------------
+	3. Footer Widget Columns
+-------------------------------------------
+*/
+.footer{					float:left;	margin-top:-5px;	width:100%;	}
+.footer_container{			margin:5px auto 0 auto;	padding-top:20px;	width:960px;	}
+.footer_columns{			float:left;	width:100%;	padding-top:20px;	}
+
+/* ---> Model 1 <---- */
+.model1 .column_1,
+.model1 .column_2,
+.model1 .column_3,
+.model1 .column_4{			width:217px;	}
+
+/* ---> Model 3 <---- */
+.model2 .column_1,
+.model2 .column_2{			width:225px;	}
+.model2 .column_3{			width:450px;	}
+
+/* ---> Model 3 <---- */
+.model3 .column_1{			width:240px;	}
+.model3 .column_2{			width:690px;	}
+
+/* ---> Model 4 <---- */
+.model4 .column_1{			width:450px;	}
+.model4 .column_2,
+.model4 .column_3{			width:225px;	}
+
+/* ---> Model 5 <---- */
+.model5 .column_1{			width:690px;	}
+.model5 .column_2{			width:240px;	}
+
+/* ---> Model 6 <---- */
+.model6 .column_2,
+.model6 .column_1{			width:465px;	}
+
+/* ---> Model 7 <---- */
+.model7 .column_1{			width:960px;	}
+
+/* ---> Model 8 <---- */
+.model8 .column_1,
+.model8 .column_2,
+.model8 .column_3,
+.model8 .column_4,
+.model8 .column_5{			width:168px;	}
+
+/* ---> Model 9 <---- */
+.model9 .column_1,
+.model9 .column_3{			width:225px;	}
+.model9 .column_2{			width:450px;	}
+
+/* ---> Model 10 <---- */
+.model10 .column_1,
+.model10 .column_2,
+.model10 .column_3{			width:300px;	}
+
+.footer_column{				float:left;	margin-right:30px;	}
+.footer_column .content{		clear:both;	margin-bottom:40px;	}
+.footer_column .title{		float:left;	width:100%;	margin-bottom:5px;	}
+
+.footer_column .content ul.flickr li{
+	border:5px solid #fff;
+	float:left;
+	width:50px;
+	margin-right:15px;
+	margin-bottom:15px;
+	background:url(../images/icons/flickr_logo.png) no-repeat 50% 50%;
+
+}
+
+.footer_column .inside{
+	float:left;
+	width:100%;
+	margin-bottom:5px;
+}
+
+/*	
+-------------------------------------------
+	4. Footer Copyright
+-------------------------------------------
+*/
+.footer .footer_info{	width:100%;	float:left;	margin-bottom:20px;	padding:10px 0;	font-size:10px;	}	
+
+
+/*	
+	F) PAGE STYLES
+-------------------------------------------
+	1. Page Style
+-------------------------------------------
+*/
+.page_wrap{				width:960px;	margin:0 auto;	}
+.page_title{			float:left;	width:100%;	padding:10px 0 15px;		}
+.page_container{		padding-top:10px;	margin-top:10px;	min-height:400px;}
+.page_sidebar{			padding-top:10px;	margin-top:10px;	width:230px;	}
+
+
+
+/*	
+	G) PORTFOLIO STYLES
+-------------------------------------------
+	1. Portfolio Style
+-------------------------------------------
+*/
+.portfolio_boxes{					float:left;	clear:both; width:100%; }
+.portfolio_boxes ul{					float:left;	list-style:none; }
+.portfolio_boxes ul li{				float:left;	padding-bottom:9px;	background:url(../images/right_shadow.png) bottom right no-repeat;	}
+.portfolio_boxes ul li ul li{				clear:both;	background:url(../images/icons/menu_arrow.png) left 10px no-repeat; list-style: none; padding: 2px 10px;	}
+.portfolio_boxes .clear_li{			background: none !important;	clear: both;	font-size: 0;	line-height: 0;	width: 100%;	margin:0; padding:0; }
+.portfolio_boxes .content{			padding:5px;	float:left;		background-color:#fff;	border:1px solid #eeeeee;	}
+.portfolio_boxes .preview {			display: block;	overflow: hidden;	position: relative;	width: 100%;	}
+.portfolio_boxes .picture{			top:0;	left: 0;	position: absolute;	}
+.portfolio_boxes .title{				font-weight:bold; clear:both; margin-top:5px; float:left; width:100%; }
+.portfolio_boxes .title a{			width:100%; float:left; background:url(../images/icons/more.png) right 7px no-repeat;  }
+.portfolio_boxes .title a span{		padding-right:15px; }
+.portfolio_boxes .description{		clear:both; }
+.portfolio_boxes .comment{			float:right;	margin-top:5px; margin-right:5px;	padding-right:20px;	color:#999;	background:url(../images/icons/comment.png) right center no-repeat;	}
+.portfolio_boxes .date{				float:left;		margin-top:5px;	padding-left:15px;	padding-bottom:2px;	color:#999;	background:url(../images/icons/date.png) left center no-repeat;	}
+/*	
+-------------------------------------------
+	2. Filterable Style
+-------------------------------------------
+*/
+#filter_container {		width:100%; }
+.filterable{			background-color:#f2f2f2;	border: 1px solid #e9e9e9;	float:left;	width:100%;	margin-bottom:30px;			border-radius: 15px;	}
+.filterable ul{			list-style:none;	padding:5px;	float:left;	}
+.filterable ul li{			cursor:pointer;	background-color: #fff;	border: 1px solid #eee;	display: block;	float: left;	font-size: 11px;	margin: 5px;	padding: 2px 10px;			border-radius: 25px;	}
+.filterable ul li.active,
+.filterable ul li:hover{	background-color: #f5f5f5;	border: 1px solid #e1e1e1;	}
+.filter_title {			float:left;	padding:13px 0px 0 20px;	font-size:11px;	}
+
+
+
+/*	
+	H) BLOG STYLES
+-------------------------------------------
+	1. Blog Style
+-------------------------------------------
+*/
+.blog_boxes{						width:100%;	}
+.blog_boxes .blog_box{				width:100%;	float:left;	padding-bottom:20px;	margin-bottom:50px; }
+.blog_boxes .box_image_inside img,
+.blog_boxes .box_image_inside embed,
+.blog_boxes .box_image_inside object{	float:left; width:100%; }
+.blog_boxes .box_image_inside iframe{	float:left; }
+.blog_boxes .blog_image{				float:left;	}
+.blog_boxes .box_image_shadow{		padding-bottom:9px;	margin-bottom:5px;	float:left;	background:url(../images/right_shadow.png) bottom right no-repeat;	}
+.blog_boxes .box_image_inside{		padding:5px;	float:left;	background-color:#fff;	border:1px solid #eeeeee;	}
+.blog_boxes .blog_info{				clear:both;	float:left;	margin-bottom:15px;	font-size:11px;	width:100%;	}
+.blog_boxes .blog_info ul{			list-style:none;	}
+.blog_boxes .blog_info ul li{			float:left; 	padding:5px;	margin-right:10px;	margin-bottom:5px;					border-radius: 5px;		background-color:#eee;	}
+.blog_boxes .blog_info ul li:hover{	background-color:#fff;	}
+.blog_boxes .blog_tag{				clear:both;	width:200px;	float:left;	font-size:10px;	}
+.blog_boxes .blog_tag ul{				list-style:none;	}
+.blog_boxes .blog_tag ul li a{			float:left; 	padding:5px;	margin:10px 10px 0 0;					border-radius: 5px;		background-color:#eee;	}
+.blog_boxes .blog_tag ul li a:hover{	background-color:#fff;	}
+.blog_boxes .blog_title{				float:left;	width:100%;	}
+.blog_boxes .blog_content_text{		float:left;	width:100%;	margin-bottom:20px;	}
+.blog_boxes .blog_content_text .small_buttons{	float:left;	margin-top:20px;	}
+.sidebar .box_custom_thumbnail embed{ 			width:690px !important;	}
+.full .box_custom_thumbnail embed{ 				width:950px !important;	}
+.nav-previous {						float: left;	width: 50%;	}
+.nav-next {							float: right;	text-align: right;	width: 50%;	}
+
+
+/*	
+	I) PLUGIN STYLES
+-------------------------------------------
+	1. Widget Pages
+-------------------------------------------
+*/
+.page_sidebar_widget{								clear:both;	margin-bottom:30px;	float:left;	width:100%;	}
+.widget_pages ul li {									background:url(../images/icons/menu_arrow.png) left 10px no-repeat; 	list-style: none;	}
+.widget_nav_menu ul li ul.sub-menu,
+.widget_pages ul li ul.children{						padding-top:3px; margin-bottom:-6px; }
+.page_sidebar_widget ul li {							background:url(../images/icons/menu_arrow.png) left 13px no-repeat; list-style: none; padding: 5px 10px;	position: relative;	}
+
+/*	
+-------------------------------------------
+	2. Pagenavi Style
+-------------------------------------------
+*/
+.wp-pagenavi{				clear:both;	float:left;	margin-top:20px;	width:100%; }
+.wp-pagenavi ul{				list-style:none;	}
+.wp-pagenavi ul li{			float:left;	margin-right:10px;	line-height:21px;	}
+.wp-pagenavi ul li a{			float:left;	padding:5px 10px;	background-color:#fff;	
+	
+		
+	border-radius: 3px;	
+}
+.wp-pagenavi ul li a:hover{		background-color:#555;	color:#fff;	}
+.wp-pagenavi ul li.current a{	background-color:#555;	color:#fff;	}
+.wp-pagenavi ul li.pages{		float:left;	margin-top:5px;	}
+
+
+/*	
+-------------------------------------------
+	3. Comment Style
+-------------------------------------------
+*/
+#comments{						float:left;	clear:both;	margin-top:20px;	width:600px;	}
+#respond {						clear:both;	float:left;	margin:20px 0;	width:100%;	}
+#respond h3{						float:left;	margin-top:20px;	}
+#respond .comment_element{		clear:both;	float:left;	margin-bottom:20px;	width:100%;	}
+#respond .comment_input{			float:left;	width:400px;	}
+#respond .comment_textarea{		float:left;	width:90%;	}
+#respond .comment_label{			float:left;	font-size:11px;	color:#ccc;	margin-bottom:10px;	}
+#respond .comment_message{		float:left;	margin:7px;	font-size:11px;	}
+#respond .logged_out{			clear:both;	margin:10px 0;	}
+#respond .cancel-comment-reply{	float:left;	margin-left:10px;	margin-top:24px;	font-weight: bold;	}
+
+ol.commentlist {						margin-bottom:20px;	padding: 0;		}
+ol.commentlist .avatar {				border: 4px solid #FFFFFF;	}
+ol.commentlist .gravatar {			float:left;	width: 70px;	}
+ol.commentlist .comment_content{		 margin-left: 90px; position:relative;	}
+ol.commentlist li {					display: block;	margin-bottom: 20px;	padding: 15px;	}
+ol.commentlist li.even {				background-color:#f1f1f1;	border: 1px solid #ddd;			border-radius: 5px;	}
+ol.commentlist li.bypostauthor {		background-color:#fff;	border: 1px solid #ddd; 		border-radius: 5px; }
+ol.commentlist .comment_time{			font-size:11px;	color:#999;	}
+ol.commentlist .comment-reply-link{	font-weight: bold;	font-size:11px;	}
+ol.commentlist ul.children {			clear: both;	display: inline-block; margin: 20px 0 10px;	width: 100%;	}
+.comment-edit-link{					bottom:0;		right:0;	font-family:Tahoma;	font-size:11px; position:absolute;	}
+
+
+/*	
+-------------------------------------------
+	4. Calendar Style
+-------------------------------------------
+*/
+#wp-calendar {			clear:both;	width:100%;	float:left;	margin: 0 0;	padding: 0 0;	text-align: center;	}
+#wp-calendar td {			padding: 2px 2px;	background-color: #555;	color: #fff;	text-align: center;			border-radius: 5px; }
+#wp-calendar caption{		text-align: center;	font-weight: bold;}
+#wp-calendar th {			padding: 2px 2px;	color: #fff;	background-color: #222;	text-align: center;	font-weight: bold;			border-radius: 5px; }
+#wp-calendar .pad {		background: transparent; }
+
+
+/*	
+-------------------------------------------
+	5. Contact Form Shortcode
+-------------------------------------------
+*/
+.contact_submit{				float:left;	}
+.contact_submit_form{			clear:both; }
+.contact_submit_form input{		width:75%; }
+.quickly_elements_left input{		width:90%; }
+.quickly_elements_right input{	width:90%; }
+
+/*	
+-------------------------------------------
+	6. Tag Cloud Widget
+-------------------------------------------
+*/
+.tagcloud a{						background-color: #fff;	border: 1px solid #eee;	display: block;	float: left;	font-size: 11px;	margin: 0 5px 5px 0;	padding: 2px 10px; border-radius: 50px;	}
+.tagcloud a:hover{				background-color: #f5f5f5;	border: 1px solid #e1e1e1;	}
+
+
+/*	
+-------------------------------------------
+	7. Footer List Style
+-------------------------------------------
+*/
+.footer_list  {			clear:both; float:left; margin-bottom:40px; width:100%;	}
+
+.footer_list ul li {		background:url(../images/icons/menu_arrow.png) left 13px no-repeat;  display:block; list-style: none; padding: 5px 10px;	position: relative; clear:both;	}
+.footer_list ul li ul { 	margin-bottom:-6px; margin-right:-10px; }
+
+/*	
+-------------------------------------------
+	8. Breadcrumb Style
+-------------------------------------------
+*/
+.breadcrumb {			font-size:11px;	}
+
+
+/*	
+	J) OTHER STYLES
+-------------------------------------------
+	1. Others
+-------------------------------------------
+*/
+.post-edit-link{		font-size:11px; }
+.screen-reader-text{	clear: both; display: block; width: 100%; font-size:0; line-height:0; text-indent:-9999px; }
+.recent_post { 			float:left; width:100%; display:block; background-image:none !important; padding:0 !important; padding-bottom:10px !important; margin-bottom:10px; }
+
+.recent_post_thumb{		float:left; margin-right:10px; background-color:#fff; padding:5px; }
+.recent_post_thumb img{	float:left; }
+.recent_post_date{		font-size:11px; }
+.recent_post_title h6{	padding-bottom:0; }
+.textwidget { 			float:left; width:100%; display:block; }
+
+/*	
+-------------------------------------------
+	2. Typography (h1,h2,etc)
+-------------------------------------------
+*/
+h1,h2,h3,
+h4,h5,h6 {	font-family:"Georgia"; 	letter-spacing:0.4px; padding-bottom:10px; font-weight:normal; font-style:italic; }
+h1{			font-size:36px;	line-height:41px; }
+h2{			font-size:28px;	line-height:35px; }
+h3{			font-size:22px;	line-height:27px; }
+h4{			font-size:18px;	line-height:29px; }
+h5{			font-size:16px; }
+h6{			font-size:14px; }

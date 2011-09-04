@@ -1,0 +1,121 @@
+/* 
+-------------------------------------------
+	SKIN SETTINGS
+-------------------------------------------
+	1.  Body Styles
+	2.	Header Line
+	3.	Header Dark Effect
+	4.	Header Menu & Recently Link Colors
+	5.	Header Menu Line
+	6.	Slider Styles
+	7.	General Border Line Color
+	8.	Footer Colors
+	9.	Other Colors
+*/
+
+
+/*	
+-------------------------------------------
+	1.  Body Styles
+-------------------------------------------
+*/
+body{ 	
+	background-image:url(../images/bg.png); 	
+	color:#555555;  	
+	font-size:12px; 	
+	font-family:"Tahoma"; 	
+	line-height:21px; 	 	
+	height:100%; 
+}  
+
+/*	
+-------------------------------------------
+	2. Header Line
+-------------------------------------------
+*/
+.header_line{		background:url(../images/header_dashed.png) repeat-x;	}
+
+/*	
+-------------------------------------------
+	3. Header Dark Effect
+-------------------------------------------
+*/
+.header_effect {	 	
+	background:url(../images/header_dark.png) no-repeat top center;	 	 
+}      
+
+/*	
+-------------------------------------------
+	4. Header Menu & Recently Link Colors
+-------------------------------------------
+*/
+.header_logo{										float:left;	} 
+.header_menu{										margin-top:0px;	float:left;	z-index:1; } 
+.header_menu ul{										list-style:none;	z-index:1;	}                
+.header_menu > ul > li > a{  							font-size:13px;  	color:#555555;  	 	font-weight:bold; 	 	 	  	font-family: "Tahoma"; 	 }  
+.recently .categories ul li a{ 							color:#555555;	 }  
+.recently .categories ul li a:hover, 
+.recently .categories ul li.current_page_item a, 
+.header_menu > ul > li.current_page_ancestor > a, 
+.header_menu > ul > li.current_page_item > a, 
+.header_menu > ul > li a:hover{	 						color:#2ba09e; }      
+.header_menu ul li ul{		  							background-color:#111111;  	border-radius: 3px;	 	width:175px; }  
+.header_menu ul li ul li a{			 					color:#888888;	 	font-size:11px;  	font-family:"Tahoma"; 	 	 	 	 }  
+.header_menu ul li ul li a:hover{							background-color:#ffffff;	color:#666666;	}  
+.header_menu ul ul li.current_page_ancestor > a, 
+.header_menu ul ul li.current_page_item > a{ 			color:#2ba09e; }    
+
+/*	
+-------------------------------------------
+	5. Header Menu Line
+-------------------------------------------
+*/
+.categories_cline, 
+.header_menu_cline{				border-bottom:1px solid #2ba09e;	}   
+
+/*	
+-------------------------------------------
+	6.	Slider Styles
+-------------------------------------------
+*/
+/* using it on home page.... */
+.codeslide_slider_home{		clear:both; width:450px; height:300px;  border-bottom:1px solid #e1e1e1;   margin: 10px auto 0 auto;	}
+.codeslide_home{			width:450px; height:300px;	}
+
+
+
+/*	
+-------------------------------------------
+	7.	General Border Line Color
+-------------------------------------------
+*/
+.divider_with_top, .divider_hr, .blog_boxes .blog_box, .no_slide, .page_title, .recently, .recently .intro .title, .header_menu_line, 
+.categories_line, .home_cboxes .one_cbox .title, .home_custom .home_custom_content, .home_custom .home_custom_title,
+.intro_content{					border-bottom:1px solid #e1e1e1;	}  
+.quickly_support, 
+.header_icon_seach{ 			border-left:1px solid #e1e1e1; }  
+.lock_box, .settings_box,
+.megaphone_box, .support_box, 
+pre.code{ 						border:1px solid #e1e1e1; }     
+.footer .footer_info{			border-top:1px solid #cfcfcf;	} 
+.footer_list ul li{				border-bottom:1px solid #cfcfcf;	}
+
+/*	
+-------------------------------------------
+	8. Footer Colors
+-------------------------------------------
+*/
+.bottom_up_wrap{ 							background-color: #f1f1f1; 	color:#555555; }    
+.footer {									color:#555555; background:url(../images/footer_bg.png) top center; } 
+.footer .footer_info{						border-top:1px solid #cfcfcf;	}      
+.recently_boxes .title a, a{					color:#2ba09e;	}  
+.recently_boxes .title a:hover, a:hover{		color:#222222;	}
+ 
+/*	
+-------------------------------------------
+	9.	Other Colors
+-------------------------------------------
+*/
+::selection {	 			background-color: #2ba09e; color: #f1f1f1; } 
+.tooltip_text{  			color:#888888;	 	background-color:#111111;  	 	border-radius: 3px; 	 } 
+.tooltip_arrow{				border-color:#111111 transparent !important; }

@@ -1,0 +1,17 @@
+<!-- begin page data -->		
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+		
+<% @postsMain.each do |dopost| %>
+	<div class="entry">
+		<h3 ><%= dopost.title %></h3>
+		<%= truncate(strip_tags(dopost.content), :length => 400) %>
+		<%= link_to 'Lanjut', dopost %>
+	</div>
+	<br />
+	<div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">
+		<a class="top" href="#top" style="top:-6px;">[ &uarr; ]</a>
+	</div>
+<% end %>
+<!-- end page data -->

@@ -1,0 +1,84 @@
+/*
+	General Settings
+*/
+a:active { 		outline: none;}
+a, a:hover {		text-decoration: none; }
+
+/*
+	Some Basic Styles
+*/
+.italic {		font-style:italic !important; }
+.center {		text-align:center !important; }
+.bold {			font-weight:bold !important; }
+.normal {		font-weight:normal !important; }
+.alignleft{		float:left !important;	}
+.alignright{	float:right !important; }
+.alignfull{		float:left !important; }
+.aligncenter{	text-align:center !important; }
+.full{			width:100%;}
+.sidebar{		width:702px;}
+
+/*
+	Some Image Styles
+*/
+img {				border:none;	border-style: none; 	}
+img.aligncenter{		display: block !important;	float:none! important; margin:0 auto; }
+img.alignright{		padding: 2px;	margin: 5px 0 2px 7px;	display: inline;	}
+img.alignleft{		padding: 2px;	margin: 5px 7px 2px 0;	display: inline;	}
+
+
+/*
+	it is like reset!
+*/
+.last {
+	/*float:right !important;*/
+	clear:right;
+	margin-right:0 !important;
+}
+
+
+/*
+	Shadow Models
+*/
+.full_shadow{			clear:both; background:url(../images/full_shadow.png) no-repeat; height:10px; margin-bottom:-10px; font-size:0; line-height:0; text-indent:-9999px; }
+.left_shadow{			clear:both; background:url(../images/left_shadow.png) no-repeat; text-indent:-9999px; font-size:0; line-height:0; }
+.right_shadow{			clear:both; background:url(../images/right_shadow.png) no-repeat; text-indent:-9999px; font-size:0; line-height:0; }
+
+/* form style */
+select,
+input[type="email"],
+input[type="password"],
+input[type="text"]{		color: #999;	font-size:11px; line-height:14px; font-family:Tahoma;	padding: 10px;	border: 1px solid #ddd;	background:#fff url(../images/input_bg.jpg) repeat-x;	}
+input[type="submit"]{		border:1px solid #ddd;	padding:10px 20px;	font-family:Tahoma;	font-size:11px; line-height:14px;  }
+textarea{				   	color: #999;	font-family:Tahoma;	padding:10px;	border: 1px solid #ddd;	background:#fff url(../images/input_bg.jpg) repeat-x;	}
+
+select option{				margin-bottom:5px;}
+
+.input{
+    color: #999;
+    float: left;
+	width:90%;
+    height: 15px;
+	font-size:11px;
+	line-height:15px;
+	font-family:Tahoma;
+	padding: 10px;
+	border: 1px solid #ddd;
+	background:#fff url(../images/input_bg.jpg) repeat-x;
+}
+
+.textarea{
+    color: #999;
+	font-size:11px;
+	font-family:Tahoma;
+	width:100%;
+	padding:10px;
+	border: 1px solid #ddd;
+	background:#fff url(../images/input_bg.jpg) repeat-x;
+
+}
+
+.textarea:focus,
+.input:focus{
+    border: 1px solid #bbb;
+}
