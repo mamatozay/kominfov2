@@ -5,9 +5,8 @@
 		
 <% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
-		<h3 ><%= dopost.title %></h3>
-		<%= truncate(strip_tags(dopost.content), :length => 400) %>
-		<%= link_to 'Lanjut', dopost %>
+		<h2><%= dopost.title %></h2>
+		<%= strip_tags(dopost.content) %>
 	</div>
 	<br />
 	<div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">

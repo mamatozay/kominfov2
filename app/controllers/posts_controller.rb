@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-    @postsMain = Post.where(["position = ?", "mainpost"])
+    @postsMainDinamic = Post.where("position = ? AND typepost = ?", "mainpost", "2")
     @postsMinipost1 = Post.where(["position = ?", "minipost1"]).limit(1)
     
     respond_to do |format|

@@ -26,6 +26,7 @@ Kominfov2::Application.routes.draw do
   get "content/menu5_3"
   get "content/menu5_4"
   get "content/menu6_1"
+  get "content/menustaticcontent"
   get "content/uploads/2011/07/"
   get "store/index"
 

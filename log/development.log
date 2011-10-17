@@ -26451,3 +26451,2533 @@ ActionController::RoutingError (No route matches "/simple.html"):
   
 
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-04 22:46:34 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 130ms (Views: 108.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:12:14 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (31.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (202.8ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (811.2ms)
+Completed 200 OK in 1248ms (Views: 904.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-09-06 09:13:23 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (15.6ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 172ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/3" for 127.0.0.1 at 2011-09-06 09:13:40 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (15.6ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (15.6ms)
+Rendered posts/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 140ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-09-06 09:13:48 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (40.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 150ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:13:57 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 150ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu4_1" for 127.0.0.1 at 2011-09-06 09:14:56 +0800
+  Processing by ContentController#menu4_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered content/menu4_1.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 130ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-09-06 09:15:15 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-09-06 09:15:31 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:16:41 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (10.0ms)
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-09-06 09:17:26 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 109ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:17:35 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 130ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-09-06 09:18:19 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (15.6ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 140ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-09-06 09:21:48 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mPost Load (10.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (10.0ms)
+Rendered posts/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 160ms (Views: 130.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-09-06 09:22:18 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered posts/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 190ms (Views: 130.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-09-06 09:23:26 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 130ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-09-06 09:23:53 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2011-09-06 09:24:04 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (530.4ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (889.2ms)
+Completed 200 OK in 983ms (Views: 920.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-09-06 09:25:00 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 125ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:25:29 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 130ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/simple.html" for 127.0.0.1 at 2011-09-06 09:29:24 +0800
+
+ActionController::RoutingError (No route matches "/simple.html"):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-09-06 09:36:04 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (156.0ms)
+Completed 200 OK in 218ms (Views: 202.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-10 21:51:09 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (18.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (184.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (661.0ms)
+Completed 200 OK in 1095ms (Views: 728.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 10:47:44 +0800
+  Processing by StoreController#index as HTML
+Completed   in 322ms
+
+NoMethodError (undefined method `%' for ["position = ?", "mainpost"]:Array):
+  app/controllers/store_controller.rb:3:in `index'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 10:59:54 +0800
+
+SyntaxError (C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected ',', expecting tASSOC
+... = Post.where([{"position = ?", "mainpost"},{"typepost = ?",...
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected '}', expecting keyword_end
+...e([{"position = ?", "mainpost"},{"typepost = ?", "1"}])
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected ',', expecting tASSOC
+...", "mainpost"},{"typepost = ?", "1"}])
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected '}', expecting keyword_end
+...ainpost"},{"typepost = ?", "1"}])
+...                               ^):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:01:01 +0800
+
+SyntaxError (C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected ',', expecting tASSOC
+...ere('$and' => [{"position = ?", "mainpost"},{"typepost = ?",...
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected '}', expecting keyword_end
+...> [{"position = ?", "mainpost"},{"typepost = ?", "1"}])
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected ',', expecting tASSOC
+...", "mainpost"},{"typepost = ?", "1"}])
+...                               ^
+C:/RubyProject/kominfov2/app/controllers/store_controller.rb:3: syntax error, unexpected '}', expecting keyword_end
+...ainpost"},{"typepost = ?", "1"}])
+...                               ^):
+  
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:02:00 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mSQL (10.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."$and" IN ('---
+position: mainpost
+', '---
+typepost: ''1''
+') ORDER BY title
+SQLite3::SQLException: no such column: posts.$and: SELECT "posts".* FROM "posts" WHERE "posts"."$and" IN ('---
+position: mainpost
+', '---
+typepost: ''1''
+') ORDER BY title
+Rendered store/index.html.erb within layouts/application (170.0ms)
+Completed   in 330ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: posts.$and: SELECT "posts".* FROM "posts" WHERE "posts"."$and" IN ('---
+position: mainpost
+', '---
+typepost: ''1''
+') ORDER BY title):
+    3: 	<p id="notice"><%= notice %></p>
+    4: <% end %>
+    5: 		
+    6: <% @postsMain.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h3 ><%= dopost.title %></h3>
+    9: 		<%= truncate(strip_tags(dopost.content), :length => 400) %>
+  app/views/store/index.html.erb:6:in `_app_views_store_index_html_erb__691014846_25865988_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."$and" IN ('---
+position: mainpost
+', '---
+typepost: ''1''
+') ORDER BY title[0m
+SQLite3::SQLException: no such column: posts.$and: SELECT "posts".* FROM "posts" WHERE "posts"."$and" IN ('---
+position: mainpost
+', '---
+typepost: ''1''
+') ORDER BY title
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:04:54 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '1') ORDER BY title
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (361.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (438.0ms)
+Completed 200 OK in 523ms (Views: 470.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:05:42 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 157ms (Views: 139.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/3/edit" for 127.0.0.1 at 2011-10-11 11:05:47 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 3 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (180.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (250.0ms)
+Completed 200 OK in 316ms (Views: 285.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:05:51 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 106ms (Views: 89.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2011-10-11 11:05:55 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (19.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 122ms (Views: 102.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/2" for 127.0.0.1 at 2011-10-11 11:06:01 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"HARI PERINGATAN ANTI NARKOBA INTERNASIONAL DI MAKASSAR", "image_url"=>"", "content"=>"Makassar, 25/06/2011 (Kominfo Newsroom) – Kntor Badan Anti Narkoba Makassar mengelar Hari peringatan Anri Narkoba Internasional di Lapangan karebosi Jumat (25/6). Acara yang di gelarpagi tadi diisi dengan Ceremonial pelepasan balon oleh Wakil walikota Makassar Supomo Guntur bserta Muspida Kota Makassar.\r\n\r\nWakil Walikota Makassar Supomo Guntur meberikan kata sambutan didalam peringatan hari an anti narkoba se-dunia. Dalam sambutannya beliau mengimbau agar msayarakat kota makassar bisa menjaga minimal diri kita sendiri dari dampak negatif yang di timbulkan oleh Narkoba. “ mari kita menjaga lingkungan kita, keluarga kita atau minimal Diri Kita dari bahaya Narkoba”, ibau supomo.\r\n\r\nSebelum acara di mulai.lapangan Karebosi di penuhi oleh warga kota makassar untuk bersenam pagi bersamasebagai rangkaian dari acara hari peringatan Anti narkoba Se-Dunia.acara ditutup dengan Orasi tentang bahaya narkoba juga di bawakan oleh Prof.Dr.Nurbahari Nur.", "position"=>"mainpost", "typepost"=>"1"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'HARI PERINGATAN ANTI NARKOBA INTERNASIONAL DI MAKASSAR') AND ("posts".id <> 2) LIMIT 1[0m
+  [1m[35mAREL (42.0ms)[0m  UPDATE "posts" SET "typepost" = '1', "updated_at" = '2011-10-11 03:06:01.682040' WHERE "posts"."id" = 2
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 201ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 11:06:02 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 207ms (Views: 169.0ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:06:09 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 134ms (Views: 114.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2011-10-11 11:06:18 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (16.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 121ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/1" for 127.0.0.1 at 2011-10-11 11:06:24 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP", "image_url"=>"", "content"=>"Makassar, 05/06/2011 (Kominfo Newsroom) – per Agustus nanti Provinsi Sulawesi Selatan menguji cobakan pemberlakuan KTP Elektronik (e-KTP) di delapan kabupaten/kota provinsi sulsel. kedelapan kabupaten/kota tersebut adalah Makassar, Luwu timur, Luwu utara, Selayar, Pangkep, Palopo, Bantaeng dan Maros.\r\n\r\nDengan adanya penerapan e-KTP, data kependudukan ganda yang dikarenakan sistem manual dapat dihilangkan. Kepala Biro Pemerintahan Dekonsentrasi dan Kependudukan Provinsi Sulawesi Selatan, Andi Bakti mengatakan ke-delapan daerah tersebut menjadi proritas tahun ini kabupaten/kota lainnya akan menyusul di 2012 atau di tahun 2013 nanti. “Data kependudukan telah di Update oleh semua kabupaten/kota se-Sulsel mulai Oktober hingga November 2010 lalu. Sedangkan penetapan NIK maupun e-KTP sepenuhnya tergantung dari integrasi sistem dari pusat.\r\n\r\nSejauh ini program dari Kemendagri baru ditetapkan di 8 daerah”, ujar Andi Bakti saat ditemu di ruang pola Kantor Gubernur Sulsel,selasa (5/7). Kementrian Dalam Negeri meluncurkan tiga program proritas tahun ini yakni dimulai dari program mempersiapkan database kependudukan, Penetapan Nomor Induk Kependudukan (NIK) dan pembuatan Elektronik KTP. Semua program proritas ini harus selesai di pada tahun 2012 nanti.", "position"=>"mainpost", "typepost"=>"1"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP') AND ("posts".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  UPDATE "posts" SET "typepost" = '1', "updated_at" = '2011-10-11 03:06:24.264582' WHERE "posts"."id" = 1
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 155ms
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-10-11 11:06:24 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 196ms (Views: 95.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:06:35 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 134ms (Views: 118.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2011-10-11 11:06:38 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (20.0ms)
+Rendered store/_minipost1.html.erb (1.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (163.0ms)
+Completed 200 OK in 216ms (Views: 196.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/4" for 127.0.0.1 at 2011-10-11 11:06:43 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"TOT Migrasi Open Source Seluruh SKPD Kota Makassar", "image_url"=>"", "content"=>"Bertempat di hotel Losari Beach hari kamis (9/7). diadakan Training of Trainer (TOT) untuk mempersiapkan Migrasi Ke open Source (Software Legal) pada seluruh SKPD Kota Makassar. hal ini dilakukan Dinas Komunikasi Dan Informatika Kota Makassar sesuai dengan Surat Edaran Mentri Negara Pendayagunaan Aparatur Negara Nomor.SE/01/M.PAN/3/2009 Tanggal 30 Maret 2009.\r\n\r\nAcara Di buka oleh Staf Ahli Drs.M.Nastsir Saibe yang mewakili Walikota Makassar.Dalam sambutannya beliau mengatakan menggunakan Sistem operasi yang legal adalah suatu sikap yang menghormati Hak Kekayaan intelektual (HAKI) yang telah didukung oleh Undang-undang di Indonesia.\r\n\r\n\"Open Soure Software dapat menjamin keamanan file dari serangan virus dan juga selain mendukung HAKI hal ini dapat mengurangi pengeluaran anggaran belanja di hal Sistem Operasi\". kata Natsir.\r\n\r\nyang bertindak sebagai Narasumber yakni Dedi Atma Jaya S.Kom dari Indonesia Goes Open Source (IGOS) Center  yang memaparkan Materi Jenis-jenis Open Source yakni LINUX. pemateri juga menjelaskan langkah demi langkang dalam penginstalllan Linux.", "position"=>"mainpost", "typepost"=>"1"}, "commit"=>"Update Post", "id"=>"4"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'TOT Migrasi Open Source Seluruh SKPD Kota Makassar') AND ("posts".id <> 4) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "posts" SET "typepost" = '1', "updated_at" = '2011-10-11 03:06:43.679337' WHERE "posts"."id" = 4
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 130ms
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2011-10-11 11:06:44 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:06:46 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '1') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (14.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 171ms (Views: 122.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:06:54 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (51.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (108.0ms)
+Completed 200 OK in 157ms (Views: 146.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:07:20 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (46.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 173ms (Views: 154.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:09:11 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (8.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (160.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (9.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (229.0ms)
+Completed 200 OK in 283ms (Views: 257.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:09:15 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (16.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 150ms (Views: 100.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:09:30 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 137ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2/edit" for 127.0.0.1 at 2011-10-11 11:09:36 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (51.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (126.0ms)
+Completed 200 OK in 179ms (Views: 157.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/2" for 127.0.0.1 at 2011-10-11 11:09:41 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"HARI PERINGATAN ANTI NARKOBA INTERNASIONAL DI MAKASSAR", "image_url"=>"", "content"=>"Makassar, 25/06/2011 (Kominfo Newsroom) – Kntor Badan Anti Narkoba Makassar mengelar Hari peringatan Anri Narkoba Internasional di Lapangan karebosi Jumat (25/6). Acara yang di gelarpagi tadi diisi dengan Ceremonial pelepasan balon oleh Wakil walikota Makassar Supomo Guntur bserta Muspida Kota Makassar.\r\n\r\nWakil Walikota Makassar Supomo Guntur meberikan kata sambutan didalam peringatan hari an anti narkoba se-dunia. Dalam sambutannya beliau mengimbau agar msayarakat kota makassar bisa menjaga minimal diri kita sendiri dari dampak negatif yang di timbulkan oleh Narkoba. “ mari kita menjaga lingkungan kita, keluarga kita atau minimal Diri Kita dari bahaya Narkoba”, ibau supomo.\r\n\r\nSebelum acara di mulai.lapangan Karebosi di penuhi oleh warga kota makassar untuk bersenam pagi bersamasebagai rangkaian dari acara hari peringatan Anti narkoba Se-Dunia.acara ditutup dengan Orasi tentang bahaya narkoba juga di bawakan oleh Prof.Dr.Nurbahari Nur.", "position"=>"mainpost", "typepost"=>"2"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'HARI PERINGATAN ANTI NARKOBA INTERNASIONAL DI MAKASSAR') AND ("posts".id <> 2) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "posts" SET "typepost" = '2', "updated_at" = '2011-10-11 03:09:41.531733' WHERE "posts"."id" = 2
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 270ms
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 11:09:42 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 118ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:09:46 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered store/index.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 136ms (Views: 117.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:09:50 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (2.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 163ms (Views: 140.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:09:59 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (135.0ms)
+Completed 200 OK in 195ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:10:07 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 126ms (Views: 96.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2011-10-11 11:10:13 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (18.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 118ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/1" for 127.0.0.1 at 2011-10-11 11:10:19 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP", "image_url"=>"", "content"=>"Makassar, 05/06/2011 (Kominfo Newsroom) – per Agustus nanti Provinsi Sulawesi Selatan menguji cobakan pemberlakuan KTP Elektronik (e-KTP) di delapan kabupaten/kota provinsi sulsel. kedelapan kabupaten/kota tersebut adalah Makassar, Luwu timur, Luwu utara, Selayar, Pangkep, Palopo, Bantaeng dan Maros.\r\n\r\nDengan adanya penerapan e-KTP, data kependudukan ganda yang dikarenakan sistem manual dapat dihilangkan. Kepala Biro Pemerintahan Dekonsentrasi dan Kependudukan Provinsi Sulawesi Selatan, Andi Bakti mengatakan ke-delapan daerah tersebut menjadi proritas tahun ini kabupaten/kota lainnya akan menyusul di 2012 atau di tahun 2013 nanti. “Data kependudukan telah di Update oleh semua kabupaten/kota se-Sulsel mulai Oktober hingga November 2010 lalu. Sedangkan penetapan NIK maupun e-KTP sepenuhnya tergantung dari integrasi sistem dari pusat.\r\n\r\nSejauh ini program dari Kemendagri baru ditetapkan di 8 daerah”, ujar Andi Bakti saat ditemu di ruang pola Kantor Gubernur Sulsel,selasa (5/7). Kementrian Dalam Negeri meluncurkan tiga program proritas tahun ini yakni dimulai dari program mempersiapkan database kependudukan, Penetapan Nomor Induk Kependudukan (NIK) dan pembuatan Elektronik KTP. Semua program proritas ini harus selesai di pada tahun 2012 nanti.", "position"=>"mainpost", "typepost"=>"2"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP') AND ("posts".id <> 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  UPDATE "posts" SET "typepost" = '2', "updated_at" = '2011-10-11 03:10:19.224956' WHERE "posts"."id" = 1
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 160ms
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-10-11 11:10:19 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 149ms (Views: 97.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:10:22 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (6.0ms)
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 157ms (Views: 138.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:10:36 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 101ms (Views: 85.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/4/edit" for 127.0.0.1 at 2011-10-11 11:10:41 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (27.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (102.6ms)
+Completed 200 OK in 150ms (Views: 134.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/4" for 127.0.0.1 at 2011-10-11 11:10:49 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"TOT Migrasi Open Source Seluruh SKPD Kota Makassar", "image_url"=>"", "content"=>"Bertempat di hotel Losari Beach hari kamis (9/7). diadakan Training of Trainer (TOT) untuk mempersiapkan Migrasi Ke open Source (Software Legal) pada seluruh SKPD Kota Makassar. hal ini dilakukan Dinas Komunikasi Dan Informatika Kota Makassar sesuai dengan Surat Edaran Mentri Negara Pendayagunaan Aparatur Negara Nomor.SE/01/M.PAN/3/2009 Tanggal 30 Maret 2009.\r\n\r\nAcara Di buka oleh Staf Ahli Drs.M.Nastsir Saibe yang mewakili Walikota Makassar.Dalam sambutannya beliau mengatakan menggunakan Sistem operasi yang legal adalah suatu sikap yang menghormati Hak Kekayaan intelektual (HAKI) yang telah didukung oleh Undang-undang di Indonesia.\r\n\r\n\"Open Soure Software dapat menjamin keamanan file dari serangan virus dan juga selain mendukung HAKI hal ini dapat mengurangi pengeluaran anggaran belanja di hal Sistem Operasi\". kata Natsir.\r\n\r\nyang bertindak sebagai Narasumber yakni Dedi Atma Jaya S.Kom dari Indonesia Goes Open Source (IGOS) Center  yang memaparkan Materi Jenis-jenis Open Source yakni LINUX. pemateri juga menjelaskan langkah demi langkang dalam penginstalllan Linux.", "position"=>"mainpost", "typepost"=>"2"}, "commit"=>"Update Post", "id"=>"4"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'TOT Migrasi Open Source Seluruh SKPD Kota Makassar') AND ("posts".id <> 4) LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  UPDATE "posts" SET "typepost" = '2', "updated_at" = '2011-10-11 03:10:49.310661' WHERE "posts"."id" = 4
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 208ms
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2011-10-11 11:10:50 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 4 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (5.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 268ms (Views: 215.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:11:09 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (370.0ms)
+Completed 200 OK in 450ms (Views: 430.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:11:19 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 126ms (Views: 107.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 11:11:30 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 108ms (Views: 86.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 11:12:06 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (16.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 130ms (Views: 105.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 11:12:30 +0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY title[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:14:37 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (5.0ms)
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (81.0ms)
+Completed 200 OK in 135ms (Views: 115.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 11:14:40 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 114ms (Views: 92.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:25:15 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (8.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (82.0ms)
+Completed 200 OK in 138ms (Views: 120.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:26:32 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 123ms (Views: 106.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:26:42 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 116ms (Views: 99.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:27:59 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (8.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 168ms (Views: 117.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:32:00 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 122ms (Views: 106.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 11:32:13 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 143ms (Views: 120.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:32:30 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (891.1ms)
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (9.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (1665.1ms)
+Completed 200 OK in 3322ms (Views: 2780.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 11:32:35 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (111.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost') ORDER BY title
+Rendered store/_footer.html.erb (38.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (489.0ms)
+Completed 200 OK in 766ms (Views: 664.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:40:34 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (7.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (6.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 149ms (Views: 120.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:40:57 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (14.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 139ms (Views: 94.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 11:42:26 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (21.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 199ms (Views: 110.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 11:44:07 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (16.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 162ms (Views: 106.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 11:57:58 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 131ms (Views: 105.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 11:58:01 +0800
+  Processing by ContentController#menu2_1 as HTML
+Rendered content/menu2_1.html.erb within layouts/application (70.0ms)
+Completed   in 152ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h2>
+    4:   <%= @post.title %>
+    5: </h2>
+    6: <p>
+    7:   <%= sanitize(@post.content) %>
+  app/views/content/menu2_1.html.erb:4:in `_app_views_content_menu____html_erb__121602181_20804208_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (5.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 13:42:32 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (23.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 148ms (Views: 127.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 13:44:10 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Sambutan Kepala Dinas", "image_url"=>"-", "content"=>"Kata sambutan kepala dinas kominfo makassar", "position"=>"mainpost", "typepost"=>"menu2_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Sambutan Kepala Dinas') LIMIT 1[0m
+  [1m[35mAREL (19.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Sambutan Kepala Dinas', 'Kata sambutan kepala dinas kominfo makassar', '2011-10-11 05:44:10.646080', '2011-10-11 05:44:10.646080', 'mainpost', 'menu2_1', '-')
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 142ms
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2011-10-11 13:44:11 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 117ms (Views: 94.0ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 13:44:21 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 109ms (Views: 91.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 13:44:23 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (24.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (182.0ms)
+Completed 200 OK in 250ms (Views: 224.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2011-10-11 13:44:28 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 5 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 207ms (Views: 185.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 13:45:41 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 145ms (Views: 128.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/2" for 127.0.0.1 at 2011-10-11 13:49:58 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 2 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 119ms (Views: 96.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 13:51:32 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered content/menu2_1.html.erb within layouts/application (96.0ms)
+Completed   in 206ms
+
+ActionView::Template::Error (undefined local variable or method `dopost' for #<#<Class:0x4efec70>:0x4efdb90>):
+    1: <div class="entry">
+    2:   <h2 ><%= dopost.title %></h2>
+    3:     <%= strip_tags(dopost.content) %>
+    4:   </div>
+    5:     <div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">
+  app/views/content/menu2_1.html.erb:2:in `_app_views_content_menu____html_erb__121602181_41411172_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (76.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 13:52:16 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 103ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 13:54:27 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/index.html.erb within layouts/application (48.0ms)
+Completed   in 113ms
+
+ActionView::Template::Error (undefined local variable or method `content_menustaticcontent_path' for #<#<Class:0x4e68dd8>:0x4e67a58>):
+    76: 				
+    77: 				<li><a href="#">Profil Dinas</a>
+    78: 					<ul class="sub-menu">
+    79: 						<li><%= link_to "Sambutan Kepala Dinas", content_menustaticcontent_path %></li>
+    80: 						<li><%= link_to "Kata Pengantar Redaksi", content_menustaticcontent_path %></li>
+    81: 						<li><%= link_to "Sejarah Dinas", content_menustaticcontent_path %></li>
+    82: 						<li><%= link_to "Visi dan Misi", content_menustaticcontent_path %></li>
+  app/views/layouts/application.html.erb:79:in `_app_views_layouts_application_html_erb___215959004_41103084_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (36.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (56.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 13:55:29 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 141ms (Views: 121.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 13:55:35 +0800
+  Processing by ContentController#menustaticcontent as HTML
+Rendered content/menustaticcontent.html.erb within layouts/application (1.0ms)
+Completed   in 34ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    3: 	<p id="notice"><%= notice %></p>
+    4: <% end %>
+    5: 		
+    6: <% @postsMainDinamic.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h2><%= dopost.title %></h2>
+    9: 		<%= strip_tags(dopost.content) %>
+  app/views/content/menustaticcontent.html.erb:6:in `_app_views_content_menustaticcontent_html_erb___654307297_41751864_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:03:18 +0800
+  Processing by ContentController#menustaticcontent as HTML
+Rendered content/menustaticcontent.html.erb within layouts/application (1.0ms)
+Completed   in 34ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    3: 	<p id="notice"><%= notice %></p>
+    4: <% end %>
+    5: 		
+    6: <% @postsMainDinamic.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h2><%= dopost.title %></h2>
+    9: 		<%= strip_tags(dopost.content) %>
+  app/views/content/menustaticcontent.html.erb:6:in `_app_views_content_menustaticcontent_html_erb___654307297_41219844_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (77.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 14:05:13 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 163ms (Views: 144.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:05:16 +0800
+  Processing by ContentController#menustaticcontent as HTML
+Rendered content/menustaticcontent.html.erb within layouts/application (2.0ms)
+Completed   in 77ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    3: 	<p id="notice"><%= notice %></p>
+    4: <% end %>
+    5: 		
+    6: <% @postsMainDinamic.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h2><%= dopost.title %></h2>
+    9: 		<%= strip_tags(dopost.content) %>
+  app/views/content/menustaticcontent.html.erb:6:in `_app_views_content_menustaticcontent_html_erb___654307297_31689240_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 14:08:10 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 141ms (Views: 120.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 14:08:14 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 214ms (Views: 186.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:11:08 +0800
+  Processing by ContentController#menustaticcontent as HTML
+Rendered content/menustaticcontent.html.erb within layouts/application (1.0ms)
+Completed   in 38ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    3: 	<p id="notice"><%= notice %></p>
+    4: <% end %>
+    5: 		
+    6: <% @postsMainDinamic.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h2><%= dopost.title %></h2>
+    9: 		<%= strip_tags(dopost.content) %>
+  app/views/content/menustaticcontent.html.erb:6:in `_app_views_content_menustaticcontent_html_erb___654307297_18127128_949956722'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:12:27 +0800
+  Processing by ContentController#menustaticcontent as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (5.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menustaticcontent.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 111ms (Views: 94.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:13:40 +0800
+  Processing by ContentController#menustaticcontent as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menustaticcontent.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 92.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 14:15:50 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+Rendered store/_staticcontent.html.erb (12.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 124ms (Views: 105.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:20:05 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 117ms (Views: 98.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:20:09 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 125ms (Views: 101.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:20:14 +0800
+  Processing by ContentController#menustaticcontent as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menustaticcontent.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 158ms (Views: 139.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menustaticcontent" for 127.0.0.1 at 2011-10-11 14:21:47 +0800
+  Processing by ContentController#menustaticcontent as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menustaticcontent.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 170ms (Views: 152.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 14:21:49 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 201ms (Views: 178.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 14:21:53 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (27.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 173ms (Views: 147.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:22:55 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Kata Pengantar Redaksi", "image_url"=>"-", "content"=>"<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>\r\n<p><%= image_tag(\"uploads/2011/content/gb_rahmadi_riza.jpg\", :size => \"130x200\", :alt => \"Rahmadi Riza\") %></p>\r\n<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>\r\n<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>\r\n<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>\r\n<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang  komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>\r\n<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>", "position"=>"mainpost", "typepost"=>"menu2_2"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Kata Pengantar Redaksi') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Kata Pengantar Redaksi', '<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>
+<p><%= image_tag("uploads/2011/content/gb_rahmadi_riza.jpg", :size => "130x200", :alt => "Rahmadi Riza") %></p>
+<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>
+<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>
+<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>
+<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>
+<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>', '2011-10-11 06:22:55.329044', '2011-10-11 06:22:55.329044', 'mainpost', 'menu2_2', '-')
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 126ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2011-10-11 14:22:55 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 123ms (Views: 99.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-10-11 14:24:05 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1') ORDER BY title
+Rendered store/_staticcontent.html.erb (13.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (5.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 169ms (Views: 151.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 14:24:08 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (17.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 162ms (Views: 104.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 14:25:51 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (13.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 148ms (Views: 102.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 14:26:13 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (14.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (34.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (145.0ms)
+Completed 200 OK in 200ms (Views: 180.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-11 14:26:40 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (17.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (203.0ms)
+Completed 200 OK in 276ms (Views: 247.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:27:28 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 160ms (Views: 141.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:27:34 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 121ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:28:08 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Sejarah Dinas", "image_url"=>"-", "content"=>"<p>Dinas Informasi dan Komunikasi Kota Makassar, berganti wajah. Jika sebelumnya dikenal sebagai Dinas Informasi dan Komunikasi Kota Makassar, kini berubah menjadi Dinas Komunikasi dan Informatika. Perubahan ini didasarkan pada Peraturan daerah (Perda) Kota Makassar No. 3 Tahun 2009 tentang Pembentukan dan Susunan Organisasi Perangkat Otonomi Daerah Kota Makassar.</p>\r\n<p>Adapun pertimbangan yang melatari perubahan ini adalah, bahwa dalam rangka penyelenggaraan urusan pemerintah daerah, diperlukan penyesuain dan perubahan terhadap kelembagaan perangkat daerah Kota Makassar, berdasarkan Peraturan Pemerintah No 41 Tahun 2007 tentang Organisasi Perangkat Daerah.</p>\r\n<p>Pada pasal 21 Perda No. 3 Tahun 2009 disebutkan bahwa Dinas Komunikasi dan Informatika mempunyai tugas pokok merumuskan. Membina, dan mengendalikan kebijakan di bidang komunikasi dan informasi, meliputi, pengembangan informasi, aplikasi dan telematika, pendayagunaan media, pemberdayaan kelembagaan serta pos dan telekomunikasi.</p>", "position"=>"mainpost", "typepost"=>"menu2_3"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Sejarah Dinas') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Sejarah Dinas', '<p>Dinas Informasi dan Komunikasi Kota Makassar, berganti wajah. Jika sebelumnya dikenal sebagai Dinas Informasi dan Komunikasi Kota Makassar, kini berubah menjadi Dinas Komunikasi dan Informatika. Perubahan ini didasarkan pada Peraturan daerah (Perda) Kota Makassar No. 3 Tahun 2009 tentang Pembentukan dan Susunan Organisasi Perangkat Otonomi Daerah Kota Makassar.</p>
+<p>Adapun pertimbangan yang melatari perubahan ini adalah, bahwa dalam rangka penyelenggaraan urusan pemerintah daerah, diperlukan penyesuain dan perubahan terhadap kelembagaan perangkat daerah Kota Makassar, berdasarkan Peraturan Pemerintah No 41 Tahun 2007 tentang Organisasi Perangkat Daerah.</p>
+<p>Pada pasal 21 Perda No. 3 Tahun 2009 disebutkan bahwa Dinas Komunikasi dan Informatika mempunyai tugas pokok merumuskan. Membina, dan mengendalikan kebijakan di bidang komunikasi dan informasi, meliputi, pengembangan informasi, aplikasi dan telematika, pendayagunaan media, pemberdayaan kelembagaan serta pos dan telekomunikasi.</p>', '2011-10-11 06:28:08.801974', '2011-10-11 06:28:08.801974', 'mainpost', 'menu2_3', '-')
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 113ms
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2011-10-11 14:28:09 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 7 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 115ms (Views: 90.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:29:17 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 126ms (Views: 109.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:29:24 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 177ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:29:51 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Visi dan Misi", "image_url"=>"-", "content"=>"<h2>Visi</h2>\r\n<h4>\"TERDEPAN DALAM PELAYANAN KOMUNIKASI DAN INFORMATIKA MENUJU MASYARAKAT MAJU DAN MANUSIAWI\"</h4>\r\n<h2>Misi</h2>\r\n<p>\r\n\t<ol>\r\n\t\t<li>Meningkatkan Akses Informasi dan Komunikasi secara merata kepada masyarakat.</li>\r\n\t\t<li>Meningkatkan Kualitas Pelayanan Informasi dan Komunikasi melalui Pendayagunaan Multi Media secara berimbang cepat dan akurat.</li>\r\n\t\t<li>Mewujudkan Iklim Usaha Masyarakat di bidang Informasi dan Komunikasi dalam mewujudkan masyarakat yang kreatif.</li>\r\n\t</ol>\r\n</p>\r\n \r\n\r\n<h2>Tugas Pokok Dinas</h2>\r\n<p>Melaksanakan kewenangan dalam bidang Informasi dan Komunikasi meliputi :</p>\r\n<p>\r\n\t<ol>\r\n\t\t<li>Program Pengembangan Informasi Aplikasi dan Telematika.</li>\r\n\t\t<li>Pos dan Telekomunikasi.</li>\r\n\t\t<li>Pendayagunaan Media.</li>\r\n\t\t<li>Pemberdayaan Kelembagaan Informasi.</li>\r\n\t<ol>\r\n</p>", "position"=>"mainpost", "typepost"=>"menu2_4"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Visi dan Misi') LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Visi dan Misi', '<h2>Visi</h2>
+<h4>"TERDEPAN DALAM PELAYANAN KOMUNIKASI DAN INFORMATIKA MENUJU MASYARAKAT MAJU DAN MANUSIAWI"</h4>
+<h2>Misi</h2>
+<p>
+	<ol>
+		<li>Meningkatkan Akses Informasi dan Komunikasi secara merata kepada masyarakat.</li>
+		<li>Meningkatkan Kualitas Pelayanan Informasi dan Komunikasi melalui Pendayagunaan Multi Media secara berimbang cepat dan akurat.</li>
+		<li>Mewujudkan Iklim Usaha Masyarakat di bidang Informasi dan Komunikasi dalam mewujudkan masyarakat yang kreatif.</li>
+	</ol>
+</p>
+ 
+
+<h2>Tugas Pokok Dinas</h2>
+<p>Melaksanakan kewenangan dalam bidang Informasi dan Komunikasi meliputi :</p>
+<p>
+	<ol>
+		<li>Program Pengembangan Informasi Aplikasi dan Telematika.</li>
+		<li>Pos dan Telekomunikasi.</li>
+		<li>Pendayagunaan Media.</li>
+		<li>Pemberdayaan Kelembagaan Informasi.</li>
+	<ol>
+</p>', '2011-10-11 06:29:51.593853', '2011-10-11 06:29:51.593853', 'mainpost', 'menu2_4', '-')
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 148ms
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2011-10-11 14:29:52 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 8 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 144ms (Views: 112.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/content/menu2_4" for 127.0.0.1 at 2011-10-11 14:30:06 +0800
+  Processing by ContentController#menu2_4 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (15.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_4.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 113ms (Views: 96.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_3" for 127.0.0.1 at 2011-10-11 14:30:13 +0800
+  Processing by ContentController#menu2_3 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_staticcontent.html.erb (21.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (5.0ms)
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu2_3.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 146ms (Views: 124.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_3" for 127.0.0.1 at 2011-10-11 14:37:54 +0800
+  Processing by ContentController#menu2_3 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_3') ORDER BY title
+Rendered store/_staticcontent.html.erb (14.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_3.html.erb within layouts/application (76.0ms)
+Completed 200 OK in 154ms (Views: 137.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu2_4" for 127.0.0.1 at 2011-10-11 14:38:13 +0800
+  Processing by ContentController#menu2_4 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (19.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_4') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_4.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 143ms (Views: 120.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:38:33 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (87.0ms)
+Completed 200 OK in 163ms (Views: 138.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:38:42 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 114ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_4" for 127.0.0.1 at 2011-10-11 14:38:51 +0800
+  Processing by ContentController#menu2_4 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (18.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_4') ORDER BY title
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu2_4.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 126ms (Views: 101.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-10-11 14:38:58 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (15.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu3_1') ORDER BY title
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 159ms (Views: 138.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:40:25 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Regulasi Perizinan", "image_url"=>"-", "content"=>"<p>MENTERI KOMUNIKASI DAN INFORMATIKA<br />\r\nREPUBLIK INDONESIA</p>\r\n<p>PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA<br />\r\nREPUBLIK INDONESIA</p>\r\n<p>NOMOR : 18/PER/M.KOMINFO/03/2009</p>\r\n<p>TENTANG</p>\r\n<p>TATA CARA DAN PROSES PERIZINAN PENYELENGGARAAN<br />\r\nPENYIARAN OLEH PEMERINTAHAN DAERAH PROVINSI<br />\r\nDAN PEMERINTAHAN DAERAH KABUPATEN/KOTA</p>\r\n<p>DENGAN RAHMAT TUHAN YANG MAHA ESA<br />\r\nMENTERI KOMUNIKASI DAN INFORMATIKA<br />\r\nREPUBLIK INDONESIA</p>\r\n\r\n<p>Menimbang :  bahwa untuk melaksanakan ketentuan pasal 9 Peraturan Pemerintah Nomor 38 Tahun 2007 tentang Pembagian Urusan Pemerintahan antara Pemerintah, Pemerintahan Daerah ProvInsi, dan Pemerintahan Daerah Kabupaten/ Kota ; perlu menetapkan peraturan Menteri Komunikasi dan Informatika Republik Indonesia tentang Tata Cara dan Proses Perizinan Penyelenggaraan Penyiaran oleh Pemerintahan Daerah Provinsi dan Pemerintahan Daerah Kabupaten/ Kota ;</p>\r\n  \r\n<p>Mengingat :<br />\r\n  <ol>\r\n  \t<li>Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi ( Lembaran Negara RI Tahun 1999 Nomor 154, Tambahan Lembaran Negara RI Nomor 3881 );</li>\r\n    <li>Undang-undang Nomor 32 Tahun 2002 tentang Penyiaran ( Lembaran Negara Tahun 2002 Nomor 139, Tambahan Lembaran Negara RI Nomor 4252 );</li>\r\n\t<li>Undang-undang Nomor 32 Tahun 2004 tentang Pemerintahan Daerah ( lembaran Negara RI Tahun 2004 Nomor 125, Tambahan Lembaran Negara RI Nomor 4437 ) sebagaimana telah diubah dengan Undang-Undang Nomor 8 Tahun 2005 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 3 Tahun 2005 tentang Perubahan Atas Undang-undang Nomor 32 tahun 2004 tentang Pemerintah Daerah menjadi Undang-Undang ( Lembaran Negara RI Tahun 2005 Nomor 108, Tambahan Lembaran Negara RI Nomor 4548 );</li>\r\n  \t<li>Peraturan Pemerintah Republik Indonesia Nomor 53 Tahun 2000 tentang Penggunaan Spektrum Frekuensi Radio dan Orbit Satelit ( Lembaran Negara RI Tahun 2000 Nomor 108, Tambahan Lembaran RI Nomor 3981 );</li>\r\n  \t<li>Peraturan Pemerintah Republik Indonesia Nomor 11 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Publik ( Lembaga Negara RI Tahun 2005 Nomor 28, Tambahan Lembaran negara RI Nomor 4485 );</li>\r\n  \t<li>Peraturan Pemerintah Republik Indonesia Nomor 50 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Swasta ( Lembaran Negara RI Tahun 2005 Nomor 127, Tambahan Lembaran Negara RI Nomor 4566 );</li>\r\n  \t<li>Peraturan Pemerintah Republik Indonesia Nomor 51 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Komunitas ( Lembaran Negara RI Tahun 2005 Nomor 128, Tambahan Lembaran Negara RI Nomor 4567)</li>\r\n  \t<li> Peraturan Pemerintah Republik Indonesia Nomor 52 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan ( Lembaran Negara RI Tahun 2005 Nomor 129, Tambahan Lembaran RI Nomor 4668 ); </li>\r\n  \t<li>Peraturan Pemerintah Republik Indonesia Nomor 38 Tahun 2007 tentang Pembagian Urusan Pemerintahan, antara Pemerintahan, Pemerintahan Daerah Provinsi, Pemerintahan Daerah Kabupaten/ Kota ( Lembaran Negara RI Tahun 2007 Nomor 82, Tambahan Lembaran Negara RI Nomor 4737 );</li>\r\n  \t<li> Peraturan Pemerintah Republik Indonesia Nomor 41 Tahun 2007 tentang Organisasi Perangkat Daerah ( Lembaran Negara RI Tahun 2007 Nomor 39, Tambahan Lembaran Negara RI Nomor 4741 );  </li>\r\n  \t<li> Peraturan Pemerintah Republik Indonesia Nomor 9 Tahun 2005 tentang Kedudukan,Tugas, Fungsi, Struktur Organisasi, dan Tata Kerja kementerian Negara Republik Indonesia;  \t  </li>\r\n  \t<li> Peraturan Pemerintah Republik Indonesia Nomor 10 Tahun 2005 tentang Unit Organisasi dan Tugas Eselon Kementerian Negara Republik Indonesia sebagaimana telah diubah dengan peraturan Presiden Republik Indonesia Nomor 15 Tahun 2005;  \t  </li>\r\n  \t<li> Keputusan Presiden Republik Indonesia Nomor 31/ P Tahun 2007 tentang Pengangkatan Menteri Negara Kabinet Indonesia Bersatu;  \t  </li>\r\n  \t<li> Peraturan Menteri Komunikasi dan Informatika Nomor 25/ P/ M. Kominfo/ 7/ 2008 tentang Organisasi dan Tata Kerja Kantor Departemen Komunikasi Dan Informatika ; </li>\r\n  </ol></p>\r\n  <p>M E M U T U S K A N </p>\r\n<p>Menetapkan : </p>\r\n<p>PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA TENTANG TATA CARA DAN PROSES PERIZINAN PENYELENGGARAAN PENYIARAN OLEH PEMERINTAH DAERAH PROVINSI DAN PEMERINTAHAN DAERAH KABUPATEN/ KOTA.\r\n    \r\n    BAB I\r\n    \r\n    KETENTUAN UMUM    </p>\r\n<p>Pasal 1    </p>\r\n<p>Dalam Peraturan Menteri Komunikasi dan Informatika ini yang di maksud dengan :    </p>\r\n<p>Urusan Perizinan Penyiaran di Daerah adalah Pelayanan Urusan Perizinan oleh Pemerintahan Dearah Kabupaten/ Kota yang ruang lingkup tugasnya di bidang Komunikasi dan Informatika.    </p>\r\n<p>Pemerintah Daerah adalah Penyelenggaraan urusan pemerintahan oleh pemerintah daerah dan DPRD menurut asas otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana di maksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945.    </p>\r\n<p>Rekomendasi Kelayakan adalah Rekomendasi yang dikeluarkan ole Komisi Penyiaran Indonesia setelah dilaksanakan Evaluasi dengan pendapat berdasarkan amanat undang-Undang Nomor 32 Tahun 2002 tentang penyiaran.    </p>\r\n<p>Rekomendasi yang dikeluarkan oleh Pemerintah Daerah adalah Rekomendasi tentang hasil evaluasi data administratif dan data teknis permohonan izin penyelenggaraan penyiaran.\r\n    \r\n    Pemerintah Daerah adalah Perangkat Daerah yang ruang lingkup tugas dan tanggung jawabnya di bidang Komunikasi dan Informatika.    </p>\r\n<p>Lembaga penyiaran adalah penyelenggara penyiaran baik lembaga penyiaran Publik, Lembaga Penyiaran Swasta, Lembaga Penyiaran Komunitas, maupun Lembaga Penyiaran Berlangganan, yang dalam melaksanakan tugas, fungsi, dan tanggung jawabnya berpedoman pada peraturan perundang-undangan yang berlaku.    </p>\r\n<p>Forum Rapat Bersama adalah suatu wadah koordinasi antara Komisi Penyiaran Indonesia dan Pemerintah di tingkat pusat yang berwenang memutuskan unyuk menerima atau menolak permohonan izin penyelenggaraan penyiaran dan perpanjangan izin penyelenggaraan penyiaran.    </p>\r\n<p>Pemohon adalah Perseorangan, warga negara Indonesia yang bertindak untuk dan atas nama badan hukum Indonesia.    </p>\r\n<p>Menteri adalah Menteri yang ruang lingkup dan tanggung jawabnya di bidang Komunikasi dan Informatika.    </p>\r\n<p>BAB II    </p>\r\n<p>PENYELENGGARAAN PERIZINAN PENYIARAN DI DAERAH    </p>\r\n<p>Pasal 2    </p>\r\n<p>Perizinan penyiaran terdiri atas :    </p>\r\n<ol type=\"a\">\r\n  <li>Urusan yang menjadi kewenangan Departemen Komunikasi dan Informatika    </li>\r\n  <li> Urusan yang dibagi bersama dengan pemerintahan Daerah Provinsi Pemerintahan Daerah Kabupaten/Kota    </li>\r\n  <li> Urusan yang dibagi bersama dengan Pemerintahan Kabupaten/Kota. </li>\r\n</ol>\r\n<p>Urusan yang menjadi kewenangan Departemen Komunikasi dan Informatika sebagaimana dimaksud pada ayat (1) huruf a meliputi :    </p>\r\n<ol type=\"a\">\r\n  <li> Penetapan arah kebijakan penyelenggaraan penyiaran dengan mempertimbangkan perkembangan teknologi penyiaran, kecenderungan permintaan pasar, ekonomi, sosial, budaya dan kondisi lingkungan lainnya;    </li>\r\n  <li> Penetapan tata cara dan persyaratan perizinan penyelenggaraan penyiaran;    </li>\r\n  <li> Penerbitan izin penyelenggaraan penyiaran radio dan televisi bagi seluruh lembaga penyiaran;    </li>\r\n  <li> Penetapan pedoman teknis pelaksanaan uji coba siaran radio dan televisi;    </li>\r\n  <li> Penetapan kebijakan pemusatan kepemilikan dan penguasaan Lembaga Penyiaran Swasta dan Lembaga Penyiaran Berlangganan oleh salah satu orang atau salah satu badan hukum, baik disatu wilayah siaran maupun di beberapa wilayah siaran;    </li>\r\n  <li> Penetapan kebijakan kepemilikan silang antara Lembaga    </li>\r\n  <li> Penetapan kebijakan kepemilikan modal asing pada Lembaga Penyiaran Swasta dan Lembaga Penyiaran berlangganan;    </li>\r\n  <li>Pemetaan usaha jasa penyiaran radio dan jasa penyiaran televisi;    </li>\r\n  <li>Penetapan wilayah layanan penyiaran radio dan televisi;    </li>\r\n  <li> Pengaturan dan penetapan sistem stasiun jaringan penyiaran radio dan televisi;    </li>\r\n  <li> Penetapan standar teknologi penyiaran radio dan televisi;    </li>\r\n  <li> Penetapan pedoman teknis dan sarana dan prasarana penyiaran radio dan televisi;    </li>\r\n  <li> Penetapan/penentuan alokasi frekuensi dalam penyelenggaraan jasa penyiaran radio dan televisi; </li>\r\n</ol>\r\n<p>Urusan yang dilaksanakan oleh pemerintahan Daerah Provinsi sebagaimana dimaksud pada ayat (1) huruf b meliputi :    </p>\r\n<ol type=\"a\">\r\n  <li> Evaluasi persyaratan administrasi dan data teknis permohonan izin penyelenggaraan penyiaran jasa penyiaran televisi;    </li>\r\n  <li> Pembelian rekomendasi kelengkapan data administrasi dan data teknis permohonan izin penyelenggaraan televisi; </li>\r\n</ol>\r\n<p>Urusan yang dilaksanakan oleh Pemerintahan Daerah Kabupaten/Kota sebagaimana dimaksud pada ayat (1) huruf c meliputi :    </p>\r\n<ol type=\"a\">\r\n  <li> Evaluasi persyaratan adminitrasi dan data tehnik terhadap permohonan izin penyelenggaraan penyiaran jasa penyiaran radio;    </li>\r\n  <li> Pemberian rekomendasi kelengkapan data administrasi dan data tehnis persyaratan permohonan izin penyelenggaraan radio;    </li>\r\n  <li> Pemberian izin lokasi pembagunan studio dan stasiun pemancar radio dan/ atau televisi; </li>\r\n</ol>\r\n<p>Pasal 3    </p>\r\n<p>Rekomendasi kelengkapan data tehnis Permohonan izin penyelenggaraan penyiaran sebagaimana dimaksud dalam Pasal 2 Ayat (3) huruf b dan Ayat (4) huruf b tidak berarti sebagai penetapan/ penentuan frekuensi dalam penyelenggaraan jasa penyiaran radio atau televisi,    </p>\r\n<p>Pasal 4    </p>\r\n<p>Persyaratan administrasi dan data tehnis sebagaimana dimaksud dalam Pasal 2 Ayat. (3) huruf a dan ayat (4) huruf a, adalah sebagaimana diatur dalam Peraturan Pemerintah Republik Indonesia Nomor 11 Tahun 2005 tentang Penyelengaraan Penyiaran Lembaga Penyiaran Publik, Peraturan Pemerintah Republik Indonesia Nomor 50 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Komunitas, dan Peraturan Pemerintah Republik Indonesia Nomor 52 Tahun 2005\r\n    \r\n    tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan.    </p>\r\n<p>Pasal 5    </p>\r\n<p>Menteri dapat melakukan pembinaan, Pengarahan dan Petunjuk kepada Pemerintahan Daerah Provinsi dan Pemerintahan Daerah Kabupaten/ Kota dalam pelaksanaan urusan yang telah menjadi Kewenangannya di bidang proses perizinan penyelenggaraan penyiaran agar lembaga penyiaran daoat memenuhi azas, tujuan dan arah penyiaran sesuai dengan peraturan perundang-undangan.    </p>\r\n<p>BAB III    </p>\r\n<p>PROSES PERIZINAN PENYELENGGARAAN PENYIARAN DAERAH</p>\r\n<p>Pasal 6    </p>\r\n<p>Pemohon mengajukan permohonan izin penyelenggaraan penyiaran kepada Menteri melalui KPI setelah di buka peluang usaha penyelenggaraan penyiaran sebagaimana diatur dalam peraturan Menteri Komunikasai dan Informatika Republik Indonesia Nomor 28/ P/ M. Kominfo/ 09/ 2008 tentang Tata Cara dan Persyaratan Perizinan Penyelenggaraan Penyiaran,    </p>\r\n<p>Permohonan sebagaimana dimaksud pada ayat (1) diubuat rangkap 2 (dua) masing-masing 1 (satu) berkas untuk KPI/ KPID, 1 (satu) berkas diteruskan kepada Menteri setelah didaftar oleh KPI, dengan tembusan kepada lembaga Pemerintah Daerah    </p>\r\n<p>Pasal 7    </p>\r\n<p>KPI/ KPID melakukan evaluasi persyaratan prongram siaran dan Pemerintah Daerah melakukan evaluasi persyaratan administrasi dan data tehnik.    </p>\r\n<p>Untuk permohonan izin penyelenggaraan penyiaran jasa penyiaran televisi evaluasi persyaratan administrasi dan data tehnik sebagaimana dimaksud pada ayat (1) dilakukan oleh Pemerintah Daerah Provinsi </p>\r\n<p>Untuk permohonan izin penyelenggaraan penyiaran jasa penyiaran radio evaluasi persyaratan administrasi dan data tehnis sebagaimana dimaksud pada Ayat (1) dilakukan oleh pemerintahan Daerah Kabupaten/ Kota.    </p>\r\n<p>Pasal 8    </p>\r\n<p>Evaluasi persyaratan administarasi dan data teknisi oleh Pemerintah Daerah dilakukan dalam waktu paling lama 1 (satu) bulan terhitung sejak diterimanya berkas permohonan sebagaimana dimaksud dalam Pasal 7 ayat (2) dan ayat (3)    </p>\r\n<p>Evaluasi persyaratan administrasi dan data teknis oleh Pemerintah Daerah dilakukan terhadap kelengkapan persyaratan administrasi dan data teknis sebagaimana yang dimaksud dalam pasal 4 </p>\r\n<p>Pasal 9    </p>\r\n<p>Pemerintah Daerah Provinsi menerbitkan rekomendasi kelengkapan data administrasi dan data teknis bagi permohonan izin penyelenggaraan penyiarn jasa penyiaran televisi yang telah memenuhi persyaratan.    </p>\r\n<p>Pemerintah Daerah Kabupaten/Kota menerbitkan rekomendasi rekomendasi kelengkapan data administrasi dan data teknis bagi permohonan izin penyelenggaraan jasa penyiaran radio yang telah memenuhi persyaratan.    </p>\r\n<p>Rekomendasi sebagaimana dimaksud pada ayat (1) dan ayat (2) dikirimkan kepada Menteri dan KPI/KPID, sebagai bahan kelengkapan pelaksanaan EDP.    </p>\r\n<p>Apabila Pemerintah daerah dalam waktu 30 (tiga puluh) hari tidak melakukan evaluasi data administrasi dan data teknis , maka data yang dipergunaan untuk keperluan Forum Rapat Bersama adalah data administrasi dan data teknis yang dikirim kepada Menteri oleh Pemohon.  </p>\r\n<p>BAB IV  </p>\r\n<p>LEMBAGA KOMUNIKASI DAN INFORMATIKA PEMERINTAHAN DAERAH  </p>\r\n<p>Pasal 10  </p>\r\n<p>Kedudukan lembaga komunikasi dan informatika Pemerintah Daerah adalah merupakan unsur pelaksana otonomi daerah.  </p>\r\n<p>BAB V  </p>\r\n<p>KETENTUAN PENUTUP  </p>\r\n<p>Pasal 11  </p>\r\n<p>Hal-hal yang belum diatur dalam Peraturan Menteri ini akan ditetapkan lebih lanjut dalam Peraturan sendiri.  </p>\r\n<p>Pasal 12  </p>\r\n<p>Peraturan Menteri ini mulai berlaku pada tanggal ditetapkan.  </p>\r\n<p>Ditetapkan di : Jakarta  </p>\r\n<p>Pada tanggal : 17 Maret 2009  </p>\r\n<p>MENTERI KOMUNIKASI DAN INFORMATIKA<br />  \r\nREPUBLIK INDONESIA,  </p>\r\n<p>&nbsp;</p>\r\n<p>MOHAMMAD NUH</p>", "position"=>"mainpost", "typepost"=>"menu3_2"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Regulasi Perizinan') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Regulasi Perizinan', '<p>MENTERI KOMUNIKASI DAN INFORMATIKA<br />
+REPUBLIK INDONESIA</p>
+<p>PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA<br />
+REPUBLIK INDONESIA</p>
+<p>NOMOR : 18/PER/M.KOMINFO/03/2009</p>
+<p>TENTANG</p>
+<p>TATA CARA DAN PROSES PERIZINAN PENYELENGGARAAN<br />
+PENYIARAN OLEH PEMERINTAHAN DAERAH PROVINSI<br />
+DAN PEMERINTAHAN DAERAH KABUPATEN/KOTA</p>
+<p>DENGAN RAHMAT TUHAN YANG MAHA ESA<br />
+MENTERI KOMUNIKASI DAN INFORMATIKA<br />
+REPUBLIK INDONESIA</p>
+
+<p>Menimbang : bahwa untuk melaksanakan ketentuan pasal 9 Peraturan Pemerintah Nomor 38 Tahun 2007 tentang Pembagian Urusan Pemerintahan antara Pemerintah, Pemerintahan Daerah ProvInsi, dan Pemerintahan Daerah Kabupaten/ Kota ; perlu menetapkan peraturan Menteri Komunikasi dan Informatika Republik Indonesia tentang Tata Cara dan Proses Perizinan Penyelenggaraan Penyiaran oleh Pemerintahan Daerah Provinsi dan Pemerintahan Daerah Kabupaten/ Kota ;</p>
+ 
+<p>Mengingat :<br />
+ <ol>
+ 	<li>Undang-Undang Nomor 36 Tahun 1999 tentang Telekomunikasi ( Lembaran Negara RI Tahun 1999 Nomor 154, Tambahan Lembaran Negara RI Nomor 3881 );</li>
+ <li>Undang-undang Nomor 32 Tahun 2002 tentang Penyiaran ( Lembaran Negara Tahun 2002 Nomor 139, Tambahan Lembaran Negara RI Nomor 4252 );</li>
+	<li>Undang-undang Nomor 32 Tahun 2004 tentang Pemerintahan Daerah ( lembaran Negara RI Tahun 2004 Nomor 125, Tambahan Lembaran Negara RI Nomor 4437 ) sebagaimana telah diubah dengan Undang-Undang Nomor 8 Tahun 2005 tentang Penetapan Peraturan Pemerintah Pengganti Undang-Undang Nomor 3 Tahun 2005 tentang Perubahan Atas Undang-undang Nomor 32 tahun 2004 tentang Pemerintah Daerah menjadi Undang-Undang ( Lembaran Negara RI Tahun 2005 Nomor 108, Tambahan Lembaran Negara RI Nomor 4548 );</li>
+ 	<li>Peraturan Pemerintah Republik Indonesia Nomor 53 Tahun 2000 tentang Penggunaan Spektrum Frekuensi Radio dan Orbit Satelit ( Lembaran Negara RI Tahun 2000 Nomor 108, Tambahan Lembaran RI Nomor 3981 );</li>
+ 	<li>Peraturan Pemerintah Republik Indonesia Nomor 11 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Publik ( Lembaga Negara RI Tahun 2005 Nomor 28, Tambahan Lembaran negara RI Nomor 4485 );</li>
+ 	<li>Peraturan Pemerintah Republik Indonesia Nomor 50 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Swasta ( Lembaran Negara RI Tahun 2005 Nomor 127, Tambahan Lembaran Negara RI Nomor 4566 );</li>
+ 	<li>Peraturan Pemerintah Republik Indonesia Nomor 51 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Komunitas ( Lembaran Negara RI Tahun 2005 Nomor 128, Tambahan Lembaran Negara RI Nomor 4567)</li>
+ 	<li> Peraturan Pemerintah Republik Indonesia Nomor 52 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan ( Lembaran Negara RI Tahun 2005 Nomor 129, Tambahan Lembaran RI Nomor 4668 ); </li>
+ 	<li>Peraturan Pemerintah Republik Indonesia Nomor 38 Tahun 2007 tentang Pembagian Urusan Pemerintahan, antara Pemerintahan, Pemerintahan Daerah Provinsi, Pemerintahan Daerah Kabupaten/ Kota ( Lembaran Negara RI Tahun 2007 Nomor 82, Tambahan Lembaran Negara RI Nomor 4737 );</li>
+ 	<li> Peraturan Pemerintah Republik Indonesia Nomor 41 Tahun 2007 tentang Organisasi Perangkat Daerah ( Lembaran Negara RI Tahun 2007 Nomor 39, Tambahan Lembaran Negara RI Nomor 4741 ); </li>
+ 	<li> Peraturan Pemerintah Republik Indonesia Nomor 9 Tahun 2005 tentang Kedudukan,Tugas, Fungsi, Struktur Organisasi, dan Tata Kerja kementerian Negara Republik Indonesia; 	 </li>
+ 	<li> Peraturan Pemerintah Republik Indonesia Nomor 10 Tahun 2005 tentang Unit Organisasi dan Tugas Eselon Kementerian Negara Republik Indonesia sebagaimana telah diubah dengan peraturan Presiden Republik Indonesia Nomor 15 Tahun 2005; 	 </li>
+ 	<li> Keputusan Presiden Republik Indonesia Nomor 31/ P Tahun 2007 tentang Pengangkatan Menteri Negara Kabinet Indonesia Bersatu; 	 </li>
+ 	<li> Peraturan Menteri Komunikasi dan Informatika Nomor 25/ P/ M. Kominfo/ 7/ 2008 tentang Organisasi dan Tata Kerja Kantor Departemen Komunikasi Dan Informatika ; </li>
+ </ol></p>
+ <p>M E M U T U S K A N </p>
+<p>Menetapkan : </p>
+<p>PERATURAN MENTERI KOMUNIKASI DAN INFORMATIKA TENTANG TATA CARA DAN PROSES PERIZINAN PENYELENGGARAAN PENYIARAN OLEH PEMERINTAH DAERAH PROVINSI DAN PEMERINTAHAN DAERAH KABUPATEN/ KOTA.
+ 
+ BAB I
+ 
+ KETENTUAN UMUM </p>
+<p>Pasal 1 </p>
+<p>Dalam Peraturan Menteri Komunikasi dan Informatika ini yang di maksud dengan : </p>
+<p>Urusan Perizinan Penyiaran di Daerah adalah Pelayanan Urusan Perizinan oleh Pemerintahan Dearah Kabupaten/ Kota yang ruang lingkup tugasnya di bidang Komunikasi dan Informatika. </p>
+<p>Pemerintah Daerah adalah Penyelenggaraan urusan pemerintahan oleh pemerintah daerah dan DPRD menurut asas otonomi seluas-luasnya dalam sistem dan prinsip Negara Kesatuan Republik Indonesia sebagaimana di maksud dalam Undang-Undang Dasar Negara Republik Indonesia Tahun 1945. </p>
+<p>Rekomendasi Kelayakan adalah Rekomendasi yang dikeluarkan ole Komisi Penyiaran Indonesia setelah dilaksanakan Evaluasi dengan pendapat berdasarkan amanat undang-Undang Nomor 32 Tahun 2002 tentang penyiaran. </p>
+<p>Rekomendasi yang dikeluarkan oleh Pemerintah Daerah adalah Rekomendasi tentang hasil evaluasi data administratif dan data teknis permohonan izin penyelenggaraan penyiaran.
+ 
+ Pemerintah Daerah adalah Perangkat Daerah yang ruang lingkup tugas dan tanggung jawabnya di bidang Komunikasi dan Informatika. </p>
+<p>Lembaga penyiaran adalah penyelenggara penyiaran baik lembaga penyiaran Publik, Lembaga Penyiaran Swasta, Lembaga Penyiaran Komunitas, maupun Lembaga Penyiaran Berlangganan, yang dalam melaksanakan tugas, fungsi, dan tanggung jawabnya berpedoman pada peraturan perundang-undangan yang berlaku. </p>
+<p>Forum Rapat Bersama adalah suatu wadah koordinasi antara Komisi Penyiaran Indonesia dan Pemerintah di tingkat pusat yang berwenang memutuskan unyuk menerima atau menolak permohonan izin penyelenggaraan penyiaran dan perpanjangan izin penyelenggaraan penyiaran. </p>
+<p>Pemohon adalah Perseorangan, warga negara Indonesia yang bertindak untuk dan atas nama badan hukum Indonesia. </p>
+<p>Menteri adalah Menteri yang ruang lingkup dan tanggung jawabnya di bidang Komunikasi dan Informatika. </p>
+<p>BAB II </p>
+<p>PENYELENGGARAAN PERIZINAN PENYIARAN DI DAERAH </p>
+<p>Pasal 2 </p>
+<p>Perizinan penyiaran terdiri atas : </p>
+<ol type="a">
+ <li>Urusan yang menjadi kewenangan Departemen Komunikasi dan Informatika </li>
+ <li> Urusan yang dibagi bersama dengan pemerintahan Daerah Provinsi Pemerintahan Daerah Kabupaten/Kota </li>
+ <li> Urusan yang dibagi bersama dengan Pemerintahan Kabupaten/Kota. </li>
+</ol>
+<p>Urusan yang menjadi kewenangan Departemen Komunikasi dan Informatika sebagaimana dimaksud pada ayat (1) huruf a meliputi : </p>
+<ol type="a">
+ <li> Penetapan arah kebijakan penyelenggaraan penyiaran dengan mempertimbangkan perkembangan teknologi penyiaran, kecenderungan permintaan pasar, ekonomi, sosial, budaya dan kondisi lingkungan lainnya; </li>
+ <li> Penetapan tata cara dan persyaratan perizinan penyelenggaraan penyiaran; </li>
+ <li> Penerbitan izin penyelenggaraan penyiaran radio dan televisi bagi seluruh lembaga penyiaran; </li>
+ <li> Penetapan pedoman teknis pelaksanaan uji coba siaran radio dan televisi; </li>
+ <li> Penetapan kebijakan pemusatan kepemilikan dan penguasaan Lembaga Penyiaran Swasta dan Lembaga Penyiaran Berlangganan oleh salah satu orang atau salah satu badan hukum, baik disatu wilayah siaran maupun di beberapa wilayah siaran; </li>
+ <li> Penetapan kebijakan kepemilikan silang antara Lembaga </li>
+ <li> Penetapan kebijakan kepemilikan modal asing pada Lembaga Penyiaran Swasta dan Lembaga Penyiaran berlangganan; </li>
+ <li>Pemetaan usaha jasa penyiaran radio dan jasa penyiaran televisi; </li>
+ <li>Penetapan wilayah layanan penyiaran radio dan televisi; </li>
+ <li> Pengaturan dan penetapan sistem stasiun jaringan penyiaran radio dan televisi; </li>
+ <li> Penetapan standar teknologi penyiaran radio dan televisi; </li>
+ <li> Penetapan pedoman teknis dan sarana dan prasarana penyiaran radio dan televisi; </li>
+ <li> Penetapan/penentuan alokasi frekuensi dalam penyelenggaraan jasa penyiaran radio dan televisi; </li>
+</ol>
+<p>Urusan yang dilaksanakan oleh pemerintahan Daerah Provinsi sebagaimana dimaksud pada ayat (1) huruf b meliputi : </p>
+<ol type="a">
+ <li> Evaluasi persyaratan administrasi dan data teknis permohonan izin penyelenggaraan penyiaran jasa penyiaran televisi; </li>
+ <li> Pembelian rekomendasi kelengkapan data administrasi dan data teknis permohonan izin penyelenggaraan televisi; </li>
+</ol>
+<p>Urusan yang dilaksanakan oleh Pemerintahan Daerah Kabupaten/Kota sebagaimana dimaksud pada ayat (1) huruf c meliputi : </p>
+<ol type="a">
+ <li> Evaluasi persyaratan adminitrasi dan data tehnik terhadap permohonan izin penyelenggaraan penyiaran jasa penyiaran radio; </li>
+ <li> Pemberian rekomendasi kelengkapan data administrasi dan data tehnis persyaratan permohonan izin penyelenggaraan radio; </li>
+ <li> Pemberian izin lokasi pembagunan studio dan stasiun pemancar radio dan/ atau televisi; </li>
+</ol>
+<p>Pasal 3 </p>
+<p>Rekomendasi kelengkapan data tehnis Permohonan izin penyelenggaraan penyiaran sebagaimana dimaksud dalam Pasal 2 Ayat (3) huruf b dan Ayat (4) huruf b tidak berarti sebagai penetapan/ penentuan frekuensi dalam penyelenggaraan jasa penyiaran radio atau televisi, </p>
+<p>Pasal 4 </p>
+<p>Persyaratan administrasi dan data tehnis sebagaimana dimaksud dalam Pasal 2 Ayat. (3) huruf a dan ayat (4) huruf a, adalah sebagaimana diatur dalam Peraturan Pemerintah Republik Indonesia Nomor 11 Tahun 2005 tentang Penyelengaraan Penyiaran Lembaga Penyiaran Publik, Peraturan Pemerintah Republik Indonesia Nomor 50 Tahun 2005 tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Komunitas, dan Peraturan Pemerintah Republik Indonesia Nomor 52 Tahun 2005
+ 
+ tentang Penyelenggaraan Penyiaran Lembaga Penyiaran Berlangganan. </p>
+<p>Pasal 5 </p>
+<p>Menteri dapat melakukan pembinaan, Pengarahan dan Petunjuk kepada Pemerintahan Daerah Provinsi dan Pemerintahan Daerah Kabupaten/ Kota dalam pelaksanaan urusan yang telah menjadi Kewenangannya di bidang proses perizinan penyelenggaraan penyiaran agar lembaga penyiaran daoat memenuhi azas, tujuan dan arah penyiaran sesuai dengan peraturan perundang-undangan. </p>
+<p>BAB III </p>
+<p>PROSES PERIZINAN PENYELENGGARAAN PENYIARAN DAERAH</p>
+<p>Pasal 6 </p>
+<p>Pemohon mengajukan permohonan izin penyelenggaraan penyiaran kepada Menteri melalui KPI setelah di buka peluang usaha penyelenggaraan penyiaran sebagaimana diatur dalam peraturan Menteri Komunikasai dan Informatika Republik Indonesia Nomor 28/ P/ M. Kominfo/ 09/ 2008 tentang Tata Cara dan Persyaratan Perizinan Penyelenggaraan Penyiaran, </p>
+<p>Permohonan sebagaimana dimaksud pada ayat (1) diubuat rangkap 2 (dua) masing-masing 1 (satu) berkas untuk KPI/ KPID, 1 (satu) berkas diteruskan kepada Menteri setelah didaftar oleh KPI, dengan tembusan kepada lembaga Pemerintah Daerah </p>
+<p>Pasal 7 </p>
+<p>KPI/ KPID melakukan evaluasi persyaratan prongram siaran dan Pemerintah Daerah melakukan evaluasi persyaratan administrasi dan data tehnik. </p>
+<p>Untuk permohonan izin penyelenggaraan penyiaran jasa penyiaran televisi evaluasi persyaratan administrasi dan data tehnik sebagaimana dimaksud pada ayat (1) dilakukan oleh Pemerintah Daerah Provinsi </p>
+<p>Untuk permohonan izin penyelenggaraan penyiaran jasa penyiaran radio evaluasi persyaratan administrasi dan data tehnis sebagaimana dimaksud pada Ayat (1) dilakukan oleh pemerintahan Daerah Kabupaten/ Kota. </p>
+<p>Pasal 8 </p>
+<p>Evaluasi persyaratan administarasi dan data teknisi oleh Pemerintah Daerah dilakukan dalam waktu paling lama 1 (satu) bulan terhitung sejak diterimanya berkas permohonan sebagaimana dimaksud dalam Pasal 7 ayat (2) dan ayat (3) </p>
+<p>Evaluasi persyaratan administrasi dan data teknis oleh Pemerintah Daerah dilakukan terhadap kelengkapan persyaratan administrasi dan data teknis sebagaimana yang dimaksud dalam pasal 4 </p>
+<p>Pasal 9 </p>
+<p>Pemerintah Daerah Provinsi menerbitkan rekomendasi kelengkapan data administrasi dan data teknis bagi permohonan izin penyelenggaraan penyiarn jasa penyiaran televisi yang telah memenuhi persyaratan. </p>
+<p>Pemerintah Daerah Kabupaten/Kota menerbitkan rekomendasi rekomendasi kelengkapan data administrasi dan data teknis bagi permohonan izin penyelenggaraan jasa penyiaran radio yang telah memenuhi persyaratan. </p>
+<p>Rekomendasi sebagaimana dimaksud pada ayat (1) dan ayat (2) dikirimkan kepada Menteri dan KPI/KPID, sebagai bahan kelengkapan pelaksanaan EDP. </p>
+<p>Apabila Pemerintah daerah dalam waktu 30 (tiga puluh) hari tidak melakukan evaluasi data administrasi dan data teknis , maka data yang dipergunaan untuk keperluan Forum Rapat Bersama adalah data administrasi dan data teknis yang dikirim kepada Menteri oleh Pemohon. </p>
+<p>BAB IV </p>
+<p>LEMBAGA KOMUNIKASI DAN INFORMATIKA PEMERINTAHAN DAERAH </p>
+<p>Pasal 10 </p>
+<p>Kedudukan lembaga komunikasi dan informatika Pemerintah Daerah adalah merupakan unsur pelaksana otonomi daerah. </p>
+<p>BAB V </p>
+<p>KETENTUAN PENUTUP </p>
+<p>Pasal 11 </p>
+<p>Hal-hal yang belum diatur dalam Peraturan Menteri ini akan ditetapkan lebih lanjut dalam Peraturan sendiri. </p>
+<p>Pasal 12 </p>
+<p>Peraturan Menteri ini mulai berlaku pada tanggal ditetapkan. </p>
+<p>Ditetapkan di : Jakarta </p>
+<p>Pada tanggal : 17 Maret 2009 </p>
+<p>MENTERI KOMUNIKASI DAN INFORMATIKA<br /> 
+REPUBLIK INDONESIA, </p>
+<p>&nbsp;</p>
+<p>MOHAMMAD NUH</p>', '2011-10-11 06:40:25.796127', '2011-10-11 06:40:25.796127', 'mainpost', 'menu3_2', '-')
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 133ms
+
+
+Started GET "/posts/9" for 127.0.0.1 at 2011-10-11 14:40:26 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 9 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 177ms (Views: 146.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:40:42 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 169ms (Views: 150.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu3_2" for 127.0.0.1 at 2011-10-11 14:40:48 +0800
+  Processing by ContentController#menu3_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (59.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu3_2') ORDER BY title
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu3_2.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 163ms (Views: 146.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:42:40 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (40.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 143ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:43:02 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Bidang Pengembangan Informasi, Aplikasi dan Telematika", "image_url"=>"-", "content"=>"Bidang Pengembangan Informasi, Aplikasi dan Telematika", "position"=>"mainpost", "typepost"=>"menu4_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Bidang Pengembangan Informasi, Aplikasi dan Telematika') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Bidang Pengembangan Informasi, Aplikasi dan Telematika', 'Bidang Pengembangan Informasi, Aplikasi dan Telematika', '2011-10-11 06:43:02.637098', '2011-10-11 06:43:02.637098', 'mainpost', 'menu4_1', '-')
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 137ms
+
+
+Started GET "/posts/10" for 127.0.0.1 at 2011-10-11 14:43:03 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 10 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (106.0ms)
+Completed 200 OK in 175ms (Views: 148.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:43:08 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 135ms (Views: 117.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu4_1" for 127.0.0.1 at 2011-10-11 14:43:15 +0800
+  Processing by ContentController#menu4_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (18.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1') ORDER BY title
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu4_1.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 120ms (Views: 98.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu4_1" for 127.0.0.1 at 2011-10-11 14:43:31 +0800
+  Processing by ContentController#menu4_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (12.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu4_1.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 128ms (Views: 107.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:44:00 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (10.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 167ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:44:22 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pengembangan Media", "image_url"=>"-", "content"=>"Seksi Pengembangan Media", "position"=>"mainpost", "typepost"=>"menu4_1_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pengembangan Media') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pengembangan Media', 'Seksi Pengembangan Media', '2011-10-11 06:44:22.510667', '2011-10-11 06:44:22.510667', 'mainpost', 'menu4_1_1', '-')
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 159ms
+
+
+Started GET "/posts/11" for 127.0.0.1 at 2011-10-11 14:44:23 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 11 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 131ms (Views: 102.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 14:44:32 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (6.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 146ms (Views: 125.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:44:37 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 142ms (Views: 119.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:44:56 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (11.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 109ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:54:12 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Aplikasi dan Telematika", "image_url"=>"-", "content"=>"Seksi Aplikasi dan Telematika", "position"=>"mainpost", "typepost"=>"menu4_1_2"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Aplikasi dan Telematika') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Aplikasi dan Telematika', 'Seksi Aplikasi dan Telematika', '2011-10-11 06:54:12.342403', '2011-10-11 06:54:12.342403', 'mainpost', 'menu4_1_2', '-')
+Redirected to http://localhost:3000/posts/12
+Completed 302 Found in 172ms
+
+
+Started GET "/posts/12" for 127.0.0.1 at 2011-10-11 14:54:12 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 12 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 140ms (Views: 119.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-11 14:54:20 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 173ms (Views: 154.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:54:23 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 111ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:55:03 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pengolahan Data, Informasi dan Monitoring", "image_url"=>"-", "content"=>"Seksi Pengolahan Data, Informasi dan Monitoring", "position"=>"mainpost", "typepost"=>"menu4_1_3"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pengolahan Data, Informasi dan Monitoring') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pengolahan Data, Informasi dan Monitoring', 'Seksi Pengolahan Data, Informasi dan Monitoring', '2011-10-11 06:55:03.639337', '2011-10-11 06:55:03.639337', 'mainpost', 'menu4_1_3', '-')
+Redirected to http://localhost:3000/posts/13
+Completed 302 Found in 114ms
+
+
+Started GET "/posts/13" for 127.0.0.1 at 2011-10-11 14:55:04 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 13 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 116ms (Views: 93.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:55:13 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (17.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 186ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu4_1_3" for 127.0.0.1 at 2011-10-11 14:57:06 +0800
+  Processing by ContentController#menu4_1_3 as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (16.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1_3') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu4_1_3.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 156ms (Views: 100.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:58:35 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Bidang Pos dan Telekomunikasi", "image_url"=>"-", "content"=>"Bidang Pos dan Telekomunikasi", "position"=>"mainpost", "typepost"=>"menu4_2"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Bidang Pos dan Telekomunikasi') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Bidang Pos dan Telekomunikasi', 'Bidang Pos dan Telekomunikasi', '2011-10-11 06:58:35.479454', '2011-10-11 06:58:35.479454', 'mainpost', 'menu4_2', '-')[0m
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 144ms
+
+
+Started GET "/posts/14" for 127.0.0.1 at 2011-10-11 14:58:36 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 14 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (14.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (142.0ms)
+Completed 200 OK in 216ms (Views: 187.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 14:58:58 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (11.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (135.0ms)
+Completed 200 OK in 191ms (Views: 166.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 14:59:16 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Teknik Pos dan Komunikasi", "image_url"=>"-", "content"=>"Seksi Teknik Pos dan Komunikasi", "position"=>"mainpost", "typepost"=>"menu4_2_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Teknik Pos dan Komunikasi') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Teknik Pos dan Komunikasi', 'Seksi Teknik Pos dan Komunikasi', '2011-10-11 06:59:16.348791', '2011-10-11 06:59:16.348791', 'mainpost', 'menu4_2_1', '-')
+Redirected to http://localhost:3000/posts/15
+Completed 302 Found in 127ms
+
+
+Started GET "/posts/15" for 127.0.0.1 at 2011-10-11 14:59:16 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 15 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 112ms (Views: 90.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:00:01 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 117ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:04:53 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi", "image_url"=>"-", "content"=>"Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi", "position"=>"mainpost", "typepost"=>"menu4_2_2"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi') LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi', 'Seksi Pemantauan dan Pembinaan Pos dan Telekomunikasi', '2011-10-11 07:04:53.539077', '2011-10-11 07:04:53.539077', 'mainpost', 'menu4_2_2', '-')[0m
+Redirected to http://localhost:3000/posts/16
+Completed 302 Found in 133ms
+
+
+Started GET "/posts/16" for 127.0.0.1 at 2011-10-11 15:04:54 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 16 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 114ms (Views: 91.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:04:58 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 119ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:05:52 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pengembangan dan Pengawasan", "image_url"=>"-", "content"=>"Seksi Pengembangan dan Pengawasan", "position"=>"mainpost", "typepost"=>"menu4_2_3"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pengembangan dan Pengawasan') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pengembangan dan Pengawasan', 'Seksi Pengembangan dan Pengawasan', '2011-10-11 07:05:52.265436', '2011-10-11 07:05:52.265436', 'mainpost', 'menu4_2_3', '-')
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 150ms
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2011-10-11 15:05:52 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 17 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (134.0ms)
+Completed 200 OK in 191ms (Views: 162.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:06:09 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 163ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:07:01 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Bidang Pendayagunaan Media", "image_url"=>"-", "content"=>"Bidang Pendayagunaan Media", "position"=>"mainpost", "typepost"=>"menu4_3"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Bidang Pendayagunaan Media') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Bidang Pendayagunaan Media', 'Bidang Pendayagunaan Media', '2011-10-11 07:07:01.419392', '2011-10-11 07:07:01.419392', 'mainpost', 'menu4_3', '-')[0m
+Redirected to http://localhost:3000/posts/18
+Completed 302 Found in 181ms
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2011-10-11 15:07:02 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 18 ORDER BY title LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 127ms (Views: 95.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:07:06 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 113ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:07:35 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pendayaguaan Media Cetak dan Elektronik", "image_url"=>"-", "content"=>"Seksi Pendayaguaan Media Cetak dan Elektronik", "position"=>"mainpost", "typepost"=>"menu4_3_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pendayaguaan Media Cetak dan Elektronik') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pendayaguaan Media Cetak dan Elektronik', 'Seksi Pendayaguaan Media Cetak dan Elektronik', '2011-10-11 07:07:35.502341', '2011-10-11 07:07:35.502341', 'mainpost', 'menu4_3_1', '-')
+Redirected to http://localhost:3000/posts/19
+Completed 302 Found in 170ms
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2011-10-11 15:07:36 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 19 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 169ms (Views: 141.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:07:59 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (40.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 142ms (Views: 122.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:08:16 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pelayanan Media Publik", "image_url"=>"-", "content"=>"Seksi Pelayanan Media Publik", "position"=>"mainpost", "typepost"=>"menu4_3_2"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pelayanan Media Publik') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pelayanan Media Publik', 'Seksi Pelayanan Media Publik', '2011-10-11 07:08:16.200669', '2011-10-11 07:08:16.200669', 'mainpost', 'menu4_3_2', '-')[0m
+Redirected to http://localhost:3000/posts/20
+Completed 302 Found in 315ms
+
+
+Started GET "/posts/20" for 127.0.0.1 at 2011-10-11 15:08:17 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 20 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 110ms (Views: 89.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:36:05 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (18.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (154.0ms)
+Completed 200 OK in 284ms (Views: 227.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:38:10 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pendayagunaan Media Pameran / Promosi", "image_url"=>"-", "content"=>"Seksi Pendayagunaan Media Pameran / Promosi", "position"=>"mainpost", "typepost"=>"menu4_3_3"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pendayagunaan Media Pameran / Promosi') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pendayagunaan Media Pameran / Promosi', 'Seksi Pendayagunaan Media Pameran / Promosi', '2011-10-11 07:38:10.441294', '2011-10-11 07:38:10.441294', 'mainpost', 'menu4_3_3', '-')
+Redirected to http://localhost:3000/posts/21
+Completed 302 Found in 109ms
+
+
+Started GET "/posts/21" for 127.0.0.1 at 2011-10-11 15:38:11 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 21 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 152ms (Views: 128.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:41:14 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 115ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:42:05 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Bidang Pemberdayaan Kelembagaan Informasi", "image_url"=>"-", "content"=>"Bidang Pemberdayaan Kelembagaan Informasi", "position"=>"mainpost", "typepost"=>"menu4_4"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Bidang Pemberdayaan Kelembagaan Informasi') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Bidang Pemberdayaan Kelembagaan Informasi', 'Bidang Pemberdayaan Kelembagaan Informasi', '2011-10-11 07:42:05.691749', '2011-10-11 07:42:05.691749', 'mainpost', 'menu4_4', '-')[0m
+Redirected to http://localhost:3000/posts/22
+Completed 302 Found in 207ms
+
+
+Started GET "/posts/22" for 127.0.0.1 at 2011-10-11 15:42:06 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 22 ORDER BY title LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (6.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 153ms (Views: 126.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:42:43 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (94.0ms)
+Completed 200 OK in 150ms (Views: 128.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:43:00 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pembinaan Kelembagaan", "image_url"=>"-", "content"=>"Seksi Pembinaan Kelembagaan", "position"=>"mainpost", "typepost"=>"menu4_4_1"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pembinaan Kelembagaan') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pembinaan Kelembagaan', 'Seksi Pembinaan Kelembagaan', '2011-10-11 07:43:01.016914', '2011-10-11 07:43:01.016914', 'mainpost', 'menu4_4_1', '-')
+Redirected to http://localhost:3000/posts/23
+Completed 302 Found in 145ms
+
+
+Started GET "/posts/23" for 127.0.0.1 at 2011-10-11 15:43:01 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 23 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (4.0ms)
+Rendered posts/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 134ms (Views: 106.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:43:15 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 129ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:43:50 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Usaha Produktif Kelembagaan", "image_url"=>"-", "content"=>"Seksi Usaha Produktif Kelembagaan", "position"=>"mainpost", "typepost"=>"menu4_4_2"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Usaha Produktif Kelembagaan') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Usaha Produktif Kelembagaan', 'Seksi Usaha Produktif Kelembagaan', '2011-10-11 07:43:50.224728', '2011-10-11 07:43:50.224728', 'mainpost', 'menu4_4_2', '-')[0m
+Redirected to http://localhost:3000/posts/24
+Completed 302 Found in 195ms
+
+
+Started GET "/posts/24" for 127.0.0.1 at 2011-10-11 15:43:50 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 24 ORDER BY title LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (12.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 166ms (Views: 140.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:44:20 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 144ms (Views: 125.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:44:34 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Seksi Pengawasan Kelembagaan", "image_url"=>"-", "content"=>"Seksi Pengawasan Kelembagaan", "position"=>"mainpost", "typepost"=>"menu4_4_3"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Seksi Pengawasan Kelembagaan') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Seksi Pengawasan Kelembagaan', 'Seksi Pengawasan Kelembagaan', '2011-10-11 07:44:34.121239', '2011-10-11 07:44:34.121239', 'mainpost', 'menu4_4_3', '-')
+Redirected to http://localhost:3000/posts/25
+Completed 302 Found in 123ms
+
+
+Started GET "/posts/25" for 127.0.0.1 at 2011-10-11 15:44:34 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 25 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 117ms (Views: 92.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:45:05 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 126ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:45:19 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Pembuatan Perizinan", "image_url"=>"-", "content"=>"Pembuatan Perizinan", "position"=>"mainpost", "typepost"=>"menu5_1"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Pembuatan Perizinan') LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Pembuatan Perizinan', 'Pembuatan Perizinan', '2011-10-11 07:45:19.265821', '2011-10-11 07:45:19.265821', 'mainpost', 'menu5_1', '-')[0m
+Redirected to http://localhost:3000/posts/26
+Completed 302 Found in 139ms
+
+
+Started GET "/posts/26" for 127.0.0.1 at 2011-10-11 15:45:19 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 26 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 172ms (Views: 148.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:45:39 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (13.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 178ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:45:56 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Pelayanan Kependudukan", "image_url"=>"-", "content"=>"Pelayanan Kependudukan", "position"=>"mainpost", "typepost"=>"menu5_2"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Pelayanan Kependudukan') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Pelayanan Kependudukan', 'Pelayanan Kependudukan', '2011-10-11 07:45:56.678961', '2011-10-11 07:45:56.678961', 'mainpost', 'menu5_2', '-')
+Redirected to http://localhost:3000/posts/27
+Completed 302 Found in 312ms
+
+
+Started GET "/posts/27" for 127.0.0.1 at 2011-10-11 15:45:57 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 27 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 117ms (Views: 95.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:46:22 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (17.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 117ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:46:36 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Pelayanan Sosial Masyarakat", "image_url"=>"-", "content"=>"Pelayanan Sosial Masyarakat", "position"=>"mainpost", "typepost"=>"menu5_3"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Pelayanan Sosial Masyarakat') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Pelayanan Sosial Masyarakat', 'Pelayanan Sosial Masyarakat', '2011-10-11 07:46:37.056270', '2011-10-11 07:46:37.056270', 'mainpost', 'menu5_3', '-')[0m
+Redirected to http://localhost:3000/posts/28
+Completed 302 Found in 134ms
+
+
+Started GET "/posts/28" for 127.0.0.1 at 2011-10-11 15:46:37 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 28 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (114.0ms)
+Completed 200 OK in 180ms (Views: 155.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:46:59 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (12.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 117ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:47:14 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Pelayanan Informasi", "image_url"=>"-", "content"=>"Pelayanan Informasi", "position"=>"mainpost", "typepost"=>"menu5_4"}, "commit"=>"Create Post"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Pelayanan Informasi') LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  INSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Pelayanan Informasi', 'Pelayanan Informasi', '2011-10-11 07:47:14.290400', '2011-10-11 07:47:14.290400', 'mainpost', 'menu5_4', '-')
+Redirected to http://localhost:3000/posts/29
+Completed 302 Found in 188ms
+
+
+Started GET "/posts/29" for 127.0.0.1 at 2011-10-11 15:47:14 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 29 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (9.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 128ms (Views: 105.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:48:03 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (50.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (236.0ms)
+Completed 200 OK in 456ms (Views: 376.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-10-11 15:48:18 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x2+AfUvkDLcTWuhJCVFeP1ZDHUjeoa5mx6u1wZLCSU=", "post"=>{"title"=>"Kontak Kami", "image_url"=>"-", "content"=>"Kontak Kami", "position"=>"mainpost", "typepost"=>"menu6_1"}, "commit"=>"Create Post"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Kontak Kami') LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('Kontak Kami', 'Kontak Kami', '2011-10-11 07:48:18.977100', '2011-10-11 07:48:18.977100', 'mainpost', 'menu6_1', '-')[0m
+Redirected to http://localhost:3000/posts/30
+Completed 302 Found in 250ms
+
+
+Started GET "/posts/30" for 127.0.0.1 at 2011-10-11 15:48:19 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 30 ORDER BY title LIMIT 1
+  [1m[36mPost Load (28.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (5.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered posts/show.html.erb within layouts/application (147.0ms)
+Completed 200 OK in 227ms (Views: 166.0ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/content/menu4_1_3" for 127.0.0.1 at 2011-10-11 15:48:26 +0800
+  Processing by ContentController#menu4_1_3 as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1_3') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (14.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu4_1_3.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 115ms (Views: 96.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/content/menu6_1" for 127.0.0.1 at 2011-10-11 15:49:31 +0800
+  Processing by ContentController#menu6_1 as HTML
+  [1m[36mPost Load (7.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu6_1') ORDER BY title
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu6_1.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 171ms (Views: 139.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-10-11 15:49:48 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (14.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 123ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu6_1" for 127.0.0.1 at 2011-10-11 15:50:24 +0800
+  Processing by ContentController#menu6_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu6_1') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (18.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (6.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu6_1.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 129ms (Views: 112.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu5_1" for 127.0.0.1 at 2011-10-11 15:51:05 +0800
+  Processing by ContentController#menu5_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu5_1') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (14.0ms)
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (1.0ms)
+Rendered content/menu5_1.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 132ms (Views: 108.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/content/menu5_2" for 127.0.0.1 at 2011-10-11 15:51:08 +0800
+  Processing by ContentController#menu5_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu5_2') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (49.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu5_2.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 164ms (Views: 144.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 15:53:35 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (4.0ms)
+Rendered store/index.html.erb within layouts/application (98.0ms)
+Completed 200 OK in 157ms (Views: 138.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu5_2" for 127.0.0.1 at 2011-10-11 15:53:51 +0800
+  Processing by ContentController#menu5_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu5_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (49.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu5_2.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 164ms (Views: 146.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/content/menu5_2" for 127.0.0.1 at 2011-10-11 15:55:18 +0800
+  Processing by ContentController#menu5_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu5_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (13.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu5_2.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 157ms (Views: 137.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-11 15:57:29 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 149ms (Views: 132.0ms | ActiveRecord: 2.0ms)

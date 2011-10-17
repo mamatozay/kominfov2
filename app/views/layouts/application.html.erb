@@ -166,6 +166,7 @@
 						<div><%= image_tag("uploads/2011/07/gb2.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 2</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 2 di Makassar.</span></span></div>
 						<div><%= image_tag("uploads/2011/07/gb3.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 3</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 3 di Makassar.</span></span></div>
 						<div><%= image_tag("uploads/2011/07/gb4.jpg", :size => "280x150", :alt => "Edit Entry") %><span class="holder_desc"><span class="ntitle" style="font-size:15px; color:#333333; background-color:#ffffff;">Kegiatan 4</span><span class="ndescription" style="font-size:11px; color:#ffffff; background-color:#333333;">Keterangan kegiatan 4 di Makassar.</span></span></div>
+						<div><%= image_tag("uploads/2011/07/gb5.jpg", :size => "280x150", :alt => "Edit Entry") %></div>
 						<div><%= image_tag("uploads/2011/07/gb1.jpg", :size => "280x150", :alt => "Edit Entry") %></div>
 					</div>
 					
@@ -197,7 +198,7 @@
 							
 						</div> 
  
-						<div class="title"><a href="simple.html">Walikota dan wakil kota Makassar</a></div> 
+						<div class="title"><a href="simple.html">Walikota dan wakil walikota Makassar</a></div> 
 						<div class="description">Keterangan...</div> 
 					
 					</div> 
@@ -429,7 +430,7 @@
 					<div class="footer_list widget_recent_comments">
 						<div class="title"><h5>Artikel Terkini</h5></div>
 							
-							<%= render :partial => "store/footer", :collection => @postsMain %>				
+							<%= render :partial => "store/footer", :collection => @postsListMainDinamic %>				
 							
 					</div>
 					<!-- end footer comment widget -->
