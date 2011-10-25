@@ -1,0 +1,12 @@
+AddHandler fastcgi-script .fcgi
+AddHandler cgi-script .cgi
+
+RewriteEngine On
+# bila rewrite berlaku di web_root sendiri www, maka RewriteBase /
+# Karena rewrite berlaku di subfolder web_root yaitu direktori web, maka RewriteBase menjadi 
+RewriteBase /web
+
+RewriteRule ^$ index.html [QSA]
+RewriteRule ^([^.]+)$ $1.html [QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ dispatch.fcgi [QSA,L]

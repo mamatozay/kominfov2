@@ -6,7 +6,7 @@
 <% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
 		<h2><%= dopost.title %></h2>
-		<%= strip_tags(dopost.content) %>
+		<%= sanitize(dopost.content) %>
 	</div>
 	<br />
 	<div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">
