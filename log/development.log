@@ -29074,3 +29074,457 @@ Rendered store/_minipost1.html.erb (10.0ms)
 Rendered store/_footer.html.erb (0.0ms)
 Rendered content/menu3_2.html.erb within layouts/application (80.0ms)
 Completed 200 OK in 130ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-25 17:09:24 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (40.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 150ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-10-31 10:08:58 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (20.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (316.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (1028.0ms)
+Completed 200 OK in 1916ms (Views: 1187.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-10-31 10:09:26 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (20.0ms)
+  [1m[36mPost Load (12.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (6.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (4.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (228.0ms)
+Completed 200 OK in 376ms (Views: 319.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-10-31 10:12:40 +0800
+  Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" ORDER BY title[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (262.0ms)
+Completed 200 OK in 352ms (Views: 322.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2011-10-31 10:12:45 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (183.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (272.0ms)
+Completed 200 OK in 342ms (Views: 322.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/6" for 127.0.0.1 at 2011-10-31 10:13:05 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"92j7uVq6o2VAOfjWFEJ0zIszjz09gCevsN6CXZSKrWA=", "post"=>{"title"=>"Kata Pengantar Redaksi", "image_url"=>"-", "content"=>"<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>\r\n<p><%= image_tag(\"images/uploads/2011/content/gb_rahmadi_riza.jpg\", :size => \"130x200\", :alt => \"Rahmadi Riza\") %></p>\r\n<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>\r\n<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>\r\n<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>\r\n<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang  komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>\r\n<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>", "position"=>"mainpost", "typepost"=>"menu2_2"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Kata Pengantar Redaksi') AND ("posts".id <> 6) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "posts" SET "content" = '<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>
+<p><%= image_tag("images/uploads/2011/content/gb_rahmadi_riza.jpg", :size => "130x200", :alt => "Rahmadi Riza") %></p>
+<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>
+<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>
+<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>
+<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>
+<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>', "updated_at" = '2011-10-31 02:13:05.427033' WHERE "posts"."id" = 6
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 150ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2011-10-31 10:13:06 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 130ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-10-31 10:13:28 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (15.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 236ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2011-10-31 10:16:56 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1[0m
+Rendered posts/_form.html.erb (50.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 180ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/6" for 127.0.0.1 at 2011-10-31 10:21:41 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"92j7uVq6o2VAOfjWFEJ0zIszjz09gCevsN6CXZSKrWA=", "post"=>{"title"=>"Kata Pengantar Redaksi", "image_url"=>"-", "content"=>"<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>\r\n<p><%= image_tag(\"uploads/2011/content/gb_rahmadi_riza.jpg\", :size => \"130x200\", :alt => \"Rahmadi Riza\") %></p>\r\n<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>\r\n<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>\r\n<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>\r\n<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang  komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>\r\n<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>", "position"=>"mainpost", "typepost"=>"menu2_2"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'Kata Pengantar Redaksi') AND ("posts".id <> 6) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "posts" SET "content" = '<p>Oleh: Drs. H.M. Rahmadi Riza. M.SiE</p>
+<p><%= image_tag("uploads/2011/content/gb_rahmadi_riza.jpg", :size => "130x200", :alt => "Rahmadi Riza") %></p>
+<p>Kepala Bidang Pemberdayaan Kelembagaan Dinas Kominfo Kota Makassar</p>
+<p>Website merupakan wahana pelayanan informasi kebijakan pemerintah berbasis komunilasi dan informatika. Tujuan pembangunan website adalah untuk mendukung pelaksanaan tugas lembaga pemerintah daerah khususnya dalam penyebarluasan informasi untuk kebutuhan publik.</p>
+<p>Website dirancang untuk mengembangkan pelayanan informasi kepada publik sebagai bagian dari upaya mendorong masyarakat dalam mendapatkan informasi yang akurat, cepat, mudah dan terjangkau.</p>
+<p>Keberadaan website merupakan satuan gugus tugas yg berada dan melekat secara operasional pada lembaga komunikasi dan informatika yang ada di Pemerintah Kota Makassar yakni Dinas Komunikasi dan Informatika Kota Makassar. Disamping itu tujuan dari pada tugas lembaga pemerintah daerah di bidang komunikasi dan informatika secara timbal balik. Secara Nasional, pemerintah terus memegang komitmen dalam usaha memfasilitasi serta memberi pelayanan informasi publik sesuai dengan amanah pasal 28 UUD 1945, dimana informasi karakter bangsa ditengah pergaulan dunia global.</p>
+<p>Website Dinas Komunikasi dan Informatika Kota Makassar dibentuk dalam rangka informasi guna memenuhi kebutuhan seluruh elemen layanan informasi masyarakat.</p>', "updated_at" = '2011-10-31 02:21:41.669423' WHERE "posts"."id" = 6
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 110ms
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2011-10-31 10:21:42 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 6 ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (10.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 156ms (Views: 119.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-17 16:18:17 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (27.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (178.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (795.0ms)
+Completed 200 OK in 1326ms (Views: 881.0ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-17 16:18:38 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 110ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dropbox" for 127.0.0.1 at 2011-11-17 16:29:43 +0800
+
+ActionController::RoutingError (No route matches "/dropbox"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/view" for 127.0.0.1 at 2011-11-17 16:31:09 +0800
+
+ActionController::RoutingError (No route matches "/view"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/views" for 127.0.0.1 at 2011-11-17 16:31:12 +0800
+
+ActionController::RoutingError (No route matches "/views"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2011-11-17 16:31:51 +0800
+
+ActionController::RoutingError (No route matches "/store"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2011-11-17 16:31:56 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (150.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (403.0ms)
+Completed 200 OK in 922ms (Views: 448.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/dropbox/index" for 127.0.0.1 at 2011-11-17 16:32:06 +0800
+
+LoadError (no such file to load -- ftools):
+  app/controllers/dropbox_controller.rb:1:in `<top (required)>'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.0ms)
+
+
+Started GET "/dropbox/index" for 127.0.0.1 at 2011-11-17 16:35:52 +0800
+  Processing by DropboxController#index as HTML
+Completed   in 10ms
+
+NameError (uninitialized constant DropboxController::Filebox):
+  app/controllers/dropbox_controller.rb:5:in `index'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/dropbox/index" for 127.0.0.1 at 2011-11-17 16:45:13 +0800
+  Processing by DropboxController#index as HTML
+Completed   in 10ms
+
+NameError (uninitialized constant DropboxController::Filebox):
+  app/controllers/dropbox_controller.rb:5:in `index'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/dropbox/index" for 127.0.0.1 at 2011-11-17 16:54:00 +0800
+  Processing by DropboxController#index as HTML
+Completed   in 10ms
+
+NameError (uninitialized constant DropboxController::Filebox):
+  app/controllers/dropbox_controller.rb:5:in `index'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-18 09:15:21 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (17.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (252.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (810.0ms)
+Completed 200 OK in 1331ms (Views: 919.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:16:59 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (30.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 200ms (Views: 180.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:38:05 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/uploads/2011/content/struktur_organisasi_2.png" for 127.0.0.1 at 2011-11-18 09:38:07 +0800
+
+ActionController::RoutingError (No route matches "/content/uploads/2011/content/struktur_organisasi_2.png"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:38:59 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 140ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/images/uploads/2011/content/struktur_organisasi_2.png" for 127.0.0.1 at 2011-11-18 09:39:04 +0800
+
+ActionController::RoutingError (No route matches "/content/images/uploads/2011/content/struktur_organisasi_2.png"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:41:39 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (480.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (520.0ms)
+Completed 200 OK in 850ms (Views: 590.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:42:15 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (50.0ms)
+Completed 200 OK in 110ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:43:03 +0800
+  Processing by ContentController#menu3_1 as HTML
+ERROR: compiling _app_views_content_menu____html_erb__503409650_33810960_174221794 RAISED c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+... }, :size => "710x360" , false) );@output_buffer.safe_concat...
+...                               ^
+c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:4: syntax error, unexpected keyword_ensure, expecting ')'
+c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:6: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_content_menu____html_erb__503409650_33810960_174221794(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "content/menu3_1";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h2>Struktur Organisasi</h2>
+<p>');@output_buffer.append= ( tag(:img, { :src => "/uploads/2011/content/struktur_organisasi_2.png", :alt => "Struktur Organisasi" }, :size => "710x360" , false) );@output_buffer.safe_concat('</p>
+<p>');@output_buffer.append= ( image_tag("uploads/2011/content/struktur_organisasi_2.png", :size => "710x360", :alt => "Struktur Organisasi") );@output_buffer.safe_concat('</p>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__633998254__process_action__841394716__callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+c:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+c:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+c:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered content/menu3_1.html.erb within layouts/application (110.0ms)
+Completed   in 150ms
+
+ActionView::Template::Error (c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:2: syntax error, unexpected ')', expecting tASSOC
+... }, :size => "710x360" , false) );@output_buffer.safe_concat...
+...                               ^
+c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:4: syntax error, unexpected keyword_ensure, expecting ')'
+c:/RubyProject/kominfov2/app/views/content/menu3_1.html.erb:6: syntax error, unexpected keyword_end, expecting ')'):
+    1: <h2>Struktur Organisasi</h2>
+    2: <p><%= tag(:img, { :src => "/uploads/2011/content/struktur_organisasi_2.png", :alt => "Struktur Organisasi" }, :size => "710x360" , false) %></p>
+    3: <p><%= image_tag("uploads/2011/content/struktur_organisasi_2.png", :size => "710x360", :alt => "Struktur Organisasi") %></p>
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu3_1') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (50.0ms)
+
+
+Started GET "/content/menu3_1" for 127.0.0.1 at 2011-11-18 09:43:29 +0800
+  Processing by ContentController#menu3_1 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (20.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered content/menu3_1.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 90.0ms | ActiveRecord: 10.0ms)
