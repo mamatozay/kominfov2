@@ -6,6 +6,7 @@
 <% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
 		<h2><%= dopost.title %></h2>
+                <%= image_tag(dopost.image_url, :size => "50x50", :alt => "Edit Entry", :class => "alignleft") %>
 		<%= strip_tags(dopost.content) %>
 	</div>
 	<br />
