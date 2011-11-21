@@ -29807,3 +29807,309 @@ Rendered store/_minipost1.html.erb (15.0ms)
 Rendered store/_footer.html.erb (2.0ms)
 Rendered content/menu3_1.html.erb within layouts/application (63.0ms)
 Completed 200 OK in 111ms (Views: 94.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-21 10:33:30 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (615.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (12.0ms)
+Rendered store/index.html.erb within layouts/application (1799.1ms)
+Completed 200 OK in 3225ms (Views: 1906.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-11-21 10:33:54 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+ERROR: compiling _app_views_store__staticcontent_html_erb__1038714852_32597124__44885713 RAISED c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:9: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...d= ( if dopost.image_url=="-" );@output_buffer.safe_concat('
+...                               ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:11: syntax error, unexpected keyword_end
+...');@output_buffer.append= ( end );@output_buffer.safe_concat...
+...                               ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:22: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_store__staticcontent_html_erb__1038714852_32597124__44885713(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "store/_staticcontent";_old_output_buffer = @output_buffer;staticcontent_counter = local_assigns[:staticcontent_counter];staticcontent = local_assigns[:staticcontent];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!-- begin page data -->		
+'); if notice 
+@output_buffer.safe_concat('	<p id="notice">');@output_buffer.append= ( notice );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.safe_concat('		
+');@output_buffer.append_if_string=  @postsMainDinamic.each do |dopost| 
+@output_buffer.safe_concat('	<div class="entry">
+		<h2>');@output_buffer.append= ( dopost.title );@output_buffer.safe_concat('</h2>
+                ');@output_buffer.append= ( if dopost.image_url=="-" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('                  ');@output_buffer.append= ( image_tag(dopost.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('                ');@output_buffer.append= ( end );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( sanitize(dopost.content) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	</div>
+	<br />
+	<div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">
+		<a class="top" href="#top" style="top:-6px;">[ &uarr; ]</a>
+	</div>
+'); end 
+@output_buffer.safe_concat('<!-- end page data -->');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:300:in `block in collection_with_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:297:in `each'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:297:in `collection_with_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:280:in `render_collection'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:255:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:253:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/partials.rb:378:in `_render_partial'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:22:in `render'
+c:/RubyProject/kominfov2/app/views/content/menu2_2.html.erb:1:in `_app_views_content_menu____html_erb___767694222_32950992_601215193'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:135:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+c:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__831973119__process_action__180181219__callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+c:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+c:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+c:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+c:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered store/_staticcontent.html.erb (174.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (201.0ms)
+Completed   in 319ms
+
+ActionView::Template::Error (c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:9: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...d= ( if dopost.image_url=="-" );@output_buffer.safe_concat('
+...                               ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:11: syntax error, unexpected keyword_end
+...');@output_buffer.append= ( end );@output_buffer.safe_concat...
+...                               ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:18: syntax error, unexpected keyword_end, expecting ')'
+'); end 
+       ^
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:20: syntax error, unexpected keyword_ensure, expecting ')'
+c:/RubyProject/kominfov2/app/views/store/_staticcontent.html.erb:22: syntax error, unexpected keyword_end, expecting ')'):
+    6: <% @postsMainDinamic.each do |dopost| %>
+    7: 	<div class="entry">
+    8: 		<h2><%= dopost.title %></h2>
+    9:                 <%= if dopost.image_url=="-" %>
+    10:                   <%= image_tag(dopost.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") %>
+    11:                 <%= end %>
+    12: 		<%= sanitize(dopost.content) %>
+  app/views/content/menu2_2.html.erb:1:in `_app_views_content_menu____html_erb___767694222_32950992_601215193'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (77.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-11-21 10:34:24 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (12.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 115ms (Views: 97.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-11-21 10:35:06 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (14.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (103.0ms)
+Completed 200 OK in 160ms (Views: 140.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/content/menu4_1" for 127.0.0.1 at 2011-11-21 10:35:14 +0800
+  Processing by ContentController#menu4_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (12.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu4_1.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 122ms (Views: 103.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/images/-" for 127.0.0.1 at 2011-11-21 10:35:14 +0800
+
+ActionController::RoutingError (No route matches "/images/-"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/content/menu4_1_1" for 127.0.0.1 at 2011-11-21 10:35:19 +0800
+  Processing by ContentController#menu4_1_1 as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1_1') ORDER BY title
+Rendered store/_staticcontent.html.erb (34.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (7.0ms)
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (4.0ms)
+Rendered content/menu4_1_1.html.erb within layouts/application (486.0ms)
+Completed 200 OK in 647ms (Views: 591.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/images/-" for 127.0.0.1 at 2011-11-21 10:35:20 +0800
+
+ActionController::RoutingError (No route matches "/images/-"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/content/menu4_1_1" for 127.0.0.1 at 2011-11-21 10:35:37 +0800
+  Processing by ContentController#menu4_1_1 as HTML
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1_1') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (28.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (6.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (4.0ms)
+Rendered content/menu4_1_1.html.erb within layouts/application (157.0ms)
+Completed 200 OK in 253ms (Views: 221.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-11-21 10:35:45 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title
+Rendered store/_staticcontent.html.erb (15.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (2.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 166ms (Views: 112.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu3_2" for 127.0.0.1 at 2011-11-21 10:35:51 +0800
+  Processing by ContentController#menu3_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu3_2') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (26.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu3_2.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 257ms (Views: 238.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu4_1_1" for 127.0.0.1 at 2011-11-21 10:35:56 +0800
+  Processing by ContentController#menu4_1_1 as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu4_1_1') ORDER BY title
+Rendered store/_staticcontent.html.erb (137.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (6.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu4_1_1.html.erb within layouts/application (225.0ms)
+Completed 200 OK in 288ms (Views: 265.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/content/menu2_2" for 127.0.0.1 at 2011-11-21 10:36:00 +0800
+  Processing by ContentController#menu2_2 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_2') ORDER BY title[0m
+Rendered store/_staticcontent.html.erb (16.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (5.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu2_2.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 182ms (Views: 163.0ms | ActiveRecord: 3.0ms)

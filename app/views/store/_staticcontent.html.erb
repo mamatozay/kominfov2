@@ -6,7 +6,10 @@
 <% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
 		<h2><%= dopost.title %></h2>
-                <%= image_tag(dopost.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") %>
+                <% if dopost.image_url=="-" %>
+                <% else %>
+                  <%= image_tag(dopost.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") %>
+                <% end %>
 		<%= sanitize(dopost.content) %>
 	</div>
 	<br />
