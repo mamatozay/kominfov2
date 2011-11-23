@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	default_scope :order => 'title'
+	#default_scope :order => 'u'
 	
 	#validation stuff
 	validates :title, :content, :presence => true

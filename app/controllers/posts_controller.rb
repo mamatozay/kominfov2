@@ -13,8 +13,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
-    @postsMainDinamic = Post.where("position = ? AND typepost = ?", "mainpost", "2")
+    @post = Post.find(params[:id]).order("updated_at DESC")
+    @postsMainDinamic = Post.where("position = ? AND typepost = ?", "mainpost", "2").order("updated_at DESC")
     @postsMinipost1 = Post.where(["position = ?", "minipost1"]).limit(1)
     
     respond_to do |format|

@@ -30113,3 +30113,177 @@ Rendered store/_minipost1.html.erb (5.0ms)
 Rendered store/_footer.html.erb (3.0ms)
 Rendered content/menu2_2.html.erb within layouts/application (127.0ms)
 Completed 200 OK in 182ms (Views: 163.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:30:24 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (20.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (220.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (790.0ms)
+Completed 200 OK in 1170ms (Views: 810.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-11-23 09:30:58 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (10.0ms)[0m  SELECT "posts".* FROM "posts" ORDER BY title
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (130.0ms)
+Completed 200 OK in 180ms (Views: 160.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2011-11-23 09:31:01 +0800
+  Processing by PostsController#new as HTML
+Rendered posts/_form.html.erb (180.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/new.html.erb within layouts/application (260.0ms)
+Completed 200 OK in 370ms (Views: 320.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2011-11-23 09:31:14 +0800
+  Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"koKmAE2c/GLLTb2ntAM28A9+Oxe2Mq3Fowpah5Rvans=", "post"=>{"title"=>"test", "image_url"=>"-", "content"=>"test", "position"=>"mainpost", "typepost"=>"2"}, "commit"=>"Create Post"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'test') LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "posts" ("title", "content", "created_at", "updated_at", "position", "typepost", "image_url") VALUES ('test', 'test', '2011-11-23 01:31:14.384421', '2011-11-23 01:31:14.384421', 'mainpost', '2', '-')[0m
+Redirected to http://localhost:3000/posts/31
+Completed 302 Found in 140ms
+
+
+Started GET "/posts/31" for 127.0.0.1 at 2011-11-23 09:31:14 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 31 ORDER BY title LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title, posts.created_at ASC LIMIT 1[0m
+Rendered store/_minipost1.html.erb (10.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 120ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:31:24 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:33:14 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 150ms (Views: 120.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:33:37 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (10.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 90.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:34:47 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 110ms (Views: 90.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:35:02 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 110ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:37:24 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1
+Rendered store/_minipost1.html.erb (190.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (440.0ms)
+Completed 200 OK in 740ms (Views: 470.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:38:41 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title, updated_at ASC
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY title LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY title, updated_at ASC
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 150ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:39:19 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at ASC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at ASC[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 130ms (Views: 110.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:39:50 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at ASC
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at ASC
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 170ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:40:09 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') LIMIT 1
+Rendered store/_minipost1.html.erb (10.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 150ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-11-23 09:40:49 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 140ms (Views: 120.0ms | ActiveRecord: 0.0ms)
