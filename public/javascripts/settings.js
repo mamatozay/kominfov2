@@ -1,6 +1,6 @@
 /* twitter settings */
 _twitter_active			= "on"; 
-_twitter_id				= "Envato"; 
+_twitter_id				= "Kominfo_Mks"; 
 _twitter_items			= 5; 
 _twitter_delay			= 5;  
 
