@@ -1,20 +1,23 @@
-<!-- begin page data -->		
-<% if notice %>
-	<p id="notice"><%= notice %></p>
-<% end %>
-		
-<% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
-		<h2><%= dopost.title %></h2>
-                <% if dopost.image_url=="-" %>
+		<h2><%= staticcontent.title %></h2>
+                <% if staticcontent.image_url=="-" or staticcontent.image_url=="" %>
                 <% else %>
-                  <%= image_tag(dopost.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") %>
+                  <%= image_tag(staticcontent.image_url, :size => "150x200", :alt => "Edit Entry", :class => "alignleft") %>
                 <% end %>
-		<%= sanitize(dopost.content) %>
+		<%= sanitize(staticcontent.content) %>
 	</div>
 	<br />
 	<div class="divider_with_top" style="padding-top:0px; margin-bottom:20px;">
 		<a class="top" href="#top" style="top:-6px;">[ &uarr; ]</a>
 	</div>
-<% end %>
-<!-- end page data -->
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4ed33d8b40b9cce6"></script>
+<!-- AddThis Button END -->

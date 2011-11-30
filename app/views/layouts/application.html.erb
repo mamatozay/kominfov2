@@ -15,6 +15,7 @@
   <%= javascript_include_tag "jquery.codestar.1.0" %>
   <%= javascript_include_tag "fancybox/jquery.fancybox-1.3.4.pack" %>
   <%= javascript_include_tag "fancybox/jquery.mousewheel-3.0.4.pack" %>
+  <%= javascript_include_tag "easySlider1.7" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -72,7 +73,7 @@
 		<!-- begin menu -->
 		<div class="header_menu">
 			<ul>
-				<li><%= link_to "Home", store_path %></li>
+				<li><%= link_to "Home", root_path %></li>
 				
 				<li><a href="#">Profil Dinas</a>
 					<ul class="sub-menu">
@@ -223,8 +224,29 @@
  
 				<!-- begin item --> 
 				<li style="margin-right:40px; margin-bottom:0px;"> 					
-					<div class="content" style="width:280px;"> 	
-					  <%= render :partial => "store/minipost1", :collection => @postsMinipost1 %>
+					<div class="content" style="width:280px;">
+					  <!-- begin slider -->
+				<script type="text/javascript">
+					jQuery(document).ready(function() { 
+						jQuery(window).load(function() { 
+							jQuery('#slider_minipost1').nivoSlider({controlNav:false, directionNav:true, pauseTime:5000, controlNavW:75, controlNavP:120, effect:'random', slices:15, pauseOnHover:true}); 
+						}); 
+					});
+				</script>
+
+				<div style="width:280px; height:195px;  border-bottom:1px solid #e1e1e1;   margin: 0px 0px 0px 0px;">
+					
+					<div id="slider_minipost1" class="nivoShow nivoSlider" style="clear:both; width:280px; height:195px;">
+						<%= render :partial => "store/minipost1", :collection => @postsMinipost1 %>
+					</div>
+					
+					<div class="hide_desc"></div>
+					<div class="full_shadow">&nbsp;</div>
+
+				</div>   
+				<!-- end slider -->
+				
+					  
 					</div> 					
 				</li> 
 				<!-- end item --> 
@@ -331,32 +353,13 @@
 	<!-- begin sidebar -->
 	<div class="page_sidebar alignright">
 		
-		<!-- begin text widget -->
-		<div class="page_sidebar_widget widget_text">
-		
-			<h4>Informasi Singkat Kota Makassar</h4>
-			
-			<div class="textwidget">
-				<p>Makassar merupakan Ibukota dari Propinsi Sulawesi Selatan<br />
-				<ul>
-					<li>Berhadapan langsung dengan pantai Losari</li>
-					<li>Jumlah penduduk 1.251.493 jiwa</li>
-					<li>Luas wilayah 175.79 km2</li>
-					<li>Kepadatan penduduk 7,119 jiwa/m2</li>
-					<li>Terdiri dari 14 kecamatan dan 143 kelurahan</li>
-					<li>Berjarak 24 km dari Bandara Hasanuddin</li>
-					<li>Pelabuhan Soekarno-Hatta merupakan pelabuhan utama</li>
-					<li>Bahasa sehari-hari menggunakan bahasa Indonesia</li>
-					<li>Mayoritas penduduk memeluk agama Islam</li>
-					<li>Iklim tropis dengan dua musim (hujan dan kemarau)</li>
-					<li>Temperatur rata-rata 26' C (minimum 21,9' C and maximum 33' C)</li>
-					<li>Merupakan kota terbesar di wilayah Timur Indonesia</li>
-				</ul>
-				</p>
-			</div>
-			
-		</div>
-		<!-- begin text widget -->		
+	  <% if current_page?(:controller => "store", :action => "index") %>
+	    <%= render :partial => "store/rightsidebar1", :collection => @postsRightSidebar1 %>
+	  <% else %>
+	    <div class="title"><h5>Artikel Terkini</h5></div>
+	    <%= render :partial => "store/footer", :collection => @postsListMainDinamic %>	    
+	  <% end %>		
+				
 	</div>
 	<!-- end sidebar -->
 
@@ -483,6 +486,17 @@
 <div class="cleardiv"></div>
 
 <%= javascript_include_tag "jquery.register.1.0" %>
-
+<script type="text/javascript">
+	$(window).ready(function(){	
+		$("#slider").easySlider({
+			auto: true, 
+			continuous: true,
+			controlsShow: true,
+			speed: 800,
+			pause: 3000
+		});
+	});	
+</script>
+<%= debug(params) if Rails.env.development? %>
 </body>
 </html>

@@ -5,7 +5,7 @@
 		
 <% @postsMainDinamic.each do |dopost| %>
 	<div class="entry">
-		<h3 ><%= dopost.title %></h3>
+		<h3 ><%= link_to dopost.title, dopost %></h3>
 		<%= truncate(strip_tags(dopost.content), :length => 400) %>
 		<%= link_to 'Lanjut', dopost %>
 	</div>

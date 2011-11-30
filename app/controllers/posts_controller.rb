@@ -15,7 +15,9 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @postsMainDinamic = Post.where("position = ? AND typepost = ?", "mainpost", "2").order("updated_at DESC")
-    @postsMinipost1 = Post.where(["position = ?", "minipost1"]).limit(1)
+    @postsMinipost1 = Post.where(["position = ?", "minipost1"]).limit(5).order("updated_at DESC")
+    @postsListMainDinamic= Post.where("position = ? AND typepost = ?", "mainpost", "2").order("updated_at DESC")
+    @postsRightSidebar1 = Post.where("position = ? AND typepost = ?", "mainpost", "2").limit(1)
     
     respond_to do |format|
       format.html # show.html.erb

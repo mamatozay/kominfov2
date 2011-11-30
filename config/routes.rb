@@ -30,10 +30,9 @@ Kominfov2::Application.routes.draw do
   get "content/menu6_1"
   get "content/menustaticcontent"
   get "content/uploads/2011/07/"
-  get "store/index"
 
-  resources :posts  
-
+  resources :posts
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -83,7 +82,7 @@ Kominfov2::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "store#index", :as => 'store'
+  root :to => "store#index"
 
   # See how all your routes lay out with "rake routes"
 
