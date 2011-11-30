@@ -16,6 +16,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @postsMainDinamic = Post.where("position = ? AND typepost = ?", "mainpost", "2").order("updated_at DESC")
     @postsMinipost1 = Post.where(["position = ?", "minipost1"]).limit(5).order("updated_at DESC")
+    @postsMinipost2 = Post.where(["position = ?", "minipost2"]).limit(5).order("updated_at DESC")
+    @postsMinipost3 = Post.where(["position = ?", "minipost3"]).limit(5).order("updated_at DESC")    
     @postsListMainDinamic= Post.where("position = ? AND typepost = ?", "mainpost", "2").order("updated_at DESC")
     @postsRightSidebar1 = Post.where("position = ? AND typepost = ?", "mainpost", "2").limit(1)
     
