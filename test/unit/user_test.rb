@@ -1,20 +1,17 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: users
 #
 #  id         :integer         not null, primary key
-#  title      :string(255)
-#  content    :text
+#  name       :string(255)
+#  email      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
-#  position   :string(255)
-#  typepost   :string(255)
-#  image_url  :string(255)
 #
 
 require 'test_helper'
 
-class PostTest < ActiveSupport::TestCase
+class UserTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

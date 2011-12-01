@@ -1,5 +1,6 @@
 Kominfov2::Application.routes.draw do
 
+
   get "dropbox/index"
 
   get "content/menu2_1"
@@ -33,6 +34,9 @@ Kominfov2::Application.routes.draw do
   get "content/uploads/2011/07/"
 
   resources :posts
+  resources :users
+
+  match '/signup',  :to => 'users#new'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
