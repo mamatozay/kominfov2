@@ -35311,3 +35311,37 @@ Rendered store/_footer.html.erb (0.0ms)
 Rendered store/_footer.html.erb (10.0ms)
 Rendered posts/show.html.erb within layouts/application (140.0ms)
 Completed 200 OK in 190ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-01 10:28:56 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (22.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (77.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (3.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (696.0ms)
+Completed 200 OK in 1337ms (Views: 761.0ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/content/menu2_1" for 127.0.0.1 at 2011-12-01 10:29:50 +0800
+  Processing by ContentController#menu2_1 as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = 'menu2_1')[0m
+Rendered store/_staticcontent.html.erb (12.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/_footer.html.erb (3.0ms)
+Rendered content/menu2_1.html.erb within layouts/application (174.0ms)
+Completed 200 OK in 244ms (Views: 219.0ms | ActiveRecord: 4.0ms)

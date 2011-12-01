@@ -1,4 +1,5 @@
 Kominfov2::Application.routes.draw do
+
   get "dropbox/index"
 
   get "content/menu2_1"
