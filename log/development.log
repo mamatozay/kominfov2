@@ -35592,3 +35592,104 @@ ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
 Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
 Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
 Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-05 14:55:02 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (18.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (46.0ms)
+  [1m[36mPost Load (32.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (7.0ms)
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (5.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (7.0ms)
+Rendered store/index.html.erb within layouts/application (1922.1ms)
+Completed 200 OK in 3984ms (Views: 2013.1ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/user/signup" for 127.0.0.1 at 2011-12-05 15:47:44 +0800
+
+ActionController::RoutingError (No route matches "/user/signup"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2011-12-05 15:47:49 +0800
+
+ActionController::RoutingError (No route matches "/user/new"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-12-05 15:47:54 +0800
+  Processing by UsersController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/application (200.0ms)
+Completed 200 OK in 277ms (Views: 231.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 15:48:16 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 70ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 15:57:49 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 177ms (Views: 121.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 15:57:52 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 36ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2011-12-05 16:03:27 +0800
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 154ms (Views: 110.0ms | ActiveRecord: 0.0ms)
