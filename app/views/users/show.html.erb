@@ -1,14 +1,26 @@
+
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+        <% if signed_in? %>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+        <% end %>
       </h1>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-    </td>
+      <% if signed_in? %>
+        <strong>Name</strong> <%= @user.name %><br />
+        <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+      <% end %>
+      <ul>
+      <% if signed_in? %>
+        <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign in", signin_path %></li>
+      <% end %>
+      </ul>
+      </td>
   </tr>
 </table>

@@ -1,7 +1,9 @@
 Kominfov2::Application.routes.draw do
 
 
-  get "dropbox/index"
+  #get "sessions/new"
+
+  #get "dropbox/index"
 
   get "content/menu2_1"
   get "content/menu2_2"
@@ -35,8 +37,11 @@ Kominfov2::Application.routes.draw do
 
   resources :posts
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   match '/signup',  :to => 'users#new'
+  match '/signin',  :to => 'sessions#new'
+  match '/signout',  :to => 'sessions#destroy'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

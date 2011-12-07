@@ -35693,3 +35693,1762 @@ Rendered store/_footer.html.erb (0.0ms)
 Rendered store/_footer.html.erb (0.0ms)
 Rendered users/new.html.erb within layouts/application (77.0ms)
 Completed 200 OK in 154ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-05 20:15:27 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (370.0ms)
+Completed 200 OK in 750ms (Views: 410.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:16:09 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (190.0ms)
+Completed 200 OK in 220ms (Views: 220.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:16:12 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:16:24 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 450ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:16:25 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 160ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:16:51 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:20:01 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 190ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:20:09 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:20:42 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 200ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:20:47 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-05 20:20:49 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 150ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:20:57 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 200ms (Views: 140.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:20:59 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 80ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:21:03 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:21:05 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-05 20:21:07 +0800
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 160ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:21:09 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-05 20:21:13 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (0.0ms)
+  [1m[35mPost Load (10.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (0.0ms)
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 150ms (Views: 120.0ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-05 20:21:26 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:21:45 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:21:48 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:21:51 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"q", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'q' LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 170ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:21:52 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:22:01 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 160ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:22:03 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:22:12 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 50ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:22:12 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 200ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:22:14 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 70ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:22:19 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 170ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:22:24 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:31:28 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 150ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-05 20:31:37 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=2):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:31:52 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 100ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:31:54 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:31:58 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"awaw@awaw.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'awaw@awaw.com' LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 200ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:32:00 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:32:19 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 100ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:32:19 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (10.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 200ms (Views: 140.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:32:40 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:34:40 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (110.0ms)
+Completed 200 OK in 210ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:34:48 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (210.0ms)
+Completed 200 OK in 240ms (Views: 240.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:34:51 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 20:34:57 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 70ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 20:34:57 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 160ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:35:05 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:43:17 +0800
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 150ms (Views: 150.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-05 20:43:21 +0800
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (10.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 140ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 20:43:23 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-05 20:43:50 +0800
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "user"=>{"name"=>"mamatozay", "email"=>"mamatozay.enine@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (10.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('mamatozay.enine@gmail.com')) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('mamatozay', 'mamatozay.enine@gmail.com', '2011-12-05 12:43:50.485516', '2011-12-05 12:43:50.485516', 'cfe4317ce810b1cc6318c308dcd0f486d4acd5978a17f00776a4be1774368f9e', 'bed58fd6083e8d8f1e2d1e2a18dcbaab4dae4c28caf369641dc8b57d38f60519')
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 380ms
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-05 20:43:51 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 140ms (Views: 90.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 20:44:32 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-05 20:59:45 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 300ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 20:59:54 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (170.0ms)
+Completed 200 OK in 200ms (Views: 200.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 21:00:02 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 80ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 21:00:03 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 170ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 21:00:08 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-12-05 21:00:10 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=3):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 21:00:17 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 30ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:4:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-12-05 21:00:46 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=3):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 21:00:50 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 80ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-05 21:00:52 +0800
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (210.0ms)
+Completed 200 OK in 240ms (Views: 240.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-05 21:00:55 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-05 21:01:01 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 50ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-05 21:01:02 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 150ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-05 21:01:04 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 40ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-06 06:37:31 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 06:37:44 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (30.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (10.0ms)
+Rendered store/index.html.erb within layouts/application (684.0ms)
+Completed 200 OK in 1086ms (Views: 684.0ms | ActiveRecord: 30.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 06:37:54 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (1638.0ms)
+Completed 200 OK in 1706ms (Views: 1704.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 06:37:59 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (10.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 06:38:05 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8fBEX+nlNED8brkTW9cXBvVojb4vbMNxTxnarV4yqwA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 230ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 06:38:06 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (10.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 204ms (Views: 114.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 06:38:09 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 122ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 10:29:12 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (9.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (5.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (3.0ms)
+  [1m[36mPost Load (4.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (4.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (5.0ms)
+Rendered store/index.html.erb within layouts/application (1403.1ms)
+Completed 200 OK in 2183ms (Views: 1454.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 10:31:01 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (705.0ms)
+Completed 200 OK in 761ms (Views: 760.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 10:31:05 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 10:31:10 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 505ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 10:31:12 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (148.0ms)
+Completed 200 OK in 509ms (Views: 246.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 10:31:17 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (21.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 303ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (29.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (381.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 10:32:37 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (3.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (235.0ms)
+Completed 200 OK in 317ms (Views: 284.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 10:32:43 +0800
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (265.0ms)
+Completed 200 OK in 489ms (Views: 487.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 10:32:53 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b7GlvQk6HRQUdAmbsWJVBszXV4vTgHyOoXvvH2xCJnA=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 73ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 10:32:54 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 190ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 10:32:58 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 191ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 10:49:31 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 151ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 10:49:36 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 83ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 10:49:37 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (292.0ms)
+Completed 200 OK in 323ms (Views: 323.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 10:49:39 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 10:49:49 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 107ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 10:49:49 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 165ms (Views: 115.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 10:49:51 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 41ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 10:50:55 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (275.0ms)
+Completed 200 OK in 374ms (Views: 310.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 10:51:00 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 42ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-06 11:31:45 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 11:31:45 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (1.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (330.0ms)
+Completed 200 OK in 383ms (Views: 362.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 14:35:37 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (6.0ms)
+Rendered store/index.html.erb within layouts/application (372.0ms)
+Completed 200 OK in 435ms (Views: 411.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 14:35:40 +0800
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 183ms (Views: 181.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 14:35:43 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 14:35:48 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 82ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 14:35:48 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 286ms (Views: 152.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 14:35:51 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 39ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 14:59:50 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (262.0ms)
+Completed 200 OK in 312ms (Views: 308.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 14:59:54 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 15:19:47 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (172.0ms)
+Completed 200 OK in 214ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-06 15:19:50 +0800
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (1.0ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/new.html.erb within layouts/application (86.0ms)
+Completed 200 OK in 184ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 15:19:52 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-06 15:20:16 +0800
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "user"=>{"name"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (6.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('test@test.com')) LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "encrypted_password", "salt") VALUES ('test', 'test@test.com', '2011-12-06 07:20:16.445451', '2011-12-06 07:20:16.445451', '67fa3e94ba3961b9783b1ee8a77607a3a398755e83908a43e60fd56238fc2fd5', '01a5d39b62b7295bace80767bfb3dad9d314b021b87d129a2f6950fdc685c78a')[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 131ms
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-12-06 15:20:17 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 167ms (Views: 93.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 15:20:19 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 93ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 15:26:19 +0800
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (116.0ms)
+Completed 200 OK in 148ms (Views: 147.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 15:26:21 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 15:26:24 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = '' LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 145ms (Views: 104.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 15:26:26 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 15:31:51 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 89ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 15:31:51 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 172ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 15:31:53 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-06 15:51:41 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 15:51:41 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (3.0ms)
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (4.0ms)
+Rendered store/index.html.erb within layouts/application (188.0ms)
+Completed 200 OK in 245ms (Views: 216.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 15:52:39 +0800
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (140.0ms)
+Completed 200 OK in 170ms (Views: 170.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 15:52:41 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 15:52:49 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (299.0ms)
+Completed 200 OK in 347ms (Views: 324.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 15:53:57 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (5.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (19.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (3.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (4.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (9.0ms)
+Rendered store/index.html.erb within layouts/application (255.0ms)
+Completed 200 OK in 387ms (Views: 326.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 15:55:16 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 15:55:17 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 15:55:25 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 60ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 15:55:26 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 190ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 15:55:28 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 88ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 15:56:51 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 320ms (Views: 100.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 15:56:55 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 43ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-06 15:57:00 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 15:57:00 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (11.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (1.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (224.0ms)
+Completed 200 OK in 285ms (Views: 253.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 15:57:06 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 190ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 15:57:08 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 38ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (75.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 16:00:13 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 154ms (Views: 97.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 16:00:17 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 60ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-06 16:00:19 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 95ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-06 16:00:21 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-06 16:00:26 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"swS4CIkei9SGoKnt3jitdgMwbccNWNDZKhCK+Lcpc58=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 60ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-06 16:00:26 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 267ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-06 16:00:28 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 55ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (64.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (88.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-06 16:05:21 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-06 16:05:22 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (0.0ms)
+  [1m[36mPost Load (10.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (0.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (0.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/index.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 160ms (Views: 130.0ms | ActiveRecord: 10.0ms)
