@@ -37940,3 +37940,101 @@ ActionController::RoutingError (No route matches "/undefined"):
   
 
 Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 14:07:47 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (5.0ms)
+Rendered store/index.html.erb within layouts/application (301.0ms)
+Completed 200 OK in 608ms (Views: 330.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 14:08:07 +0800
+  Processing by PostsController#index as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (608.0ms)
+Completed 200 OK in 1106ms (Views: 666.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 14:09:53 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (199.0ms)
+Completed 200 OK in 277ms (Views: 230.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-08 14:09:56 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 14:09:57 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (1.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 144ms (Views: 122.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/31/edit" for 127.0.0.1 at 2011-12-08 14:10:03 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 40ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-08 14:10:03 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 168ms (Views: 167.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-08 14:10:09 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)

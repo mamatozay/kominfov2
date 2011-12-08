@@ -12,7 +12,6 @@
     <td class="sidebar round">
       <% if signed_in? %>
         <strong>Name</strong> <%= @user.name %><br />
-        <strong>URL</strong>  <%= link_to user_path(@user), @user %>
       <% end %>
       <ul>
       <% if signed_in? %>
