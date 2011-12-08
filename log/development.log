@@ -37452,3 +37452,491 @@ Rendered store/_rightsidebar1.html.erb (0.0ms)
 Rendered store/_footer.html.erb (0.0ms)
 Rendered store/index.html.erb within layouts/application (120.0ms)
 Completed 200 OK in 160ms (Views: 130.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 12:11:42 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (519.0ms)
+Completed 200 OK in 953ms (Views: 565.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 12:12:02 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (1055.1ms)
+Completed 200 OK in 1567ms (Views: 1163.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-08 12:12:07 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 525ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-08 12:12:16 +0800
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 183ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-08 12:12:17 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (308.0ms)
+Completed 200 OK in 379ms (Views: 378.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-08 12:12:19 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-08 12:12:30 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMBcA4rvuONgAkY/78WPBVOX8mAv76ozUqkQHTwcMok=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 221ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 12:12:31 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (111.0ms)
+Completed 200 OK in 188ms (Views: 142.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-08 12:12:33 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 39ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-08 12:12:34 +0800
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (1.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/edit.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 188ms (Views: 130.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/undefined" for 127.0.0.1 at 2011-12-08 12:12:36 +0800
+
+ActionController::RoutingError (No route matches "/users/1/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 12:12:46 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (4.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (3.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 191ms (Views: 170.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 12:44:07 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 199ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-08 12:44:13 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 174ms (Views: 96.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-12-08 12:44:19 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 175ms (Views: 96.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-08 12:44:36 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1
+Completed   in 130ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.0ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2011-12-08 12:47:28 +0800
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 158ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 12:47:28 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (1.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (124.0ms)
+Completed 200 OK in 174ms (Views: 154.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 12:47:38 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 229ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-08 12:47:40 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 38ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (109.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (127.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-12-08 13:59:39 +0800
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 13:59:40 +0800
+  Processing by StoreController#index as HTML
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (1.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1
+Rendered store/_rightsidebar1.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/index.html.erb within layouts/application (93.0ms)
+Completed 200 OK in 143ms (Views: 123.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 13:59:47 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mPost Load (2.0ms)[0m  SELECT "posts".* FROM "posts"
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (388.0ms)
+Completed 200 OK in 443ms (Views: 424.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 13:59:58 +0800
+  Processing by PostsController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `authenticate' for #<PostsController:0x32febf0>):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 14:00:23 +0800
+  Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 47ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-08 14:00:23 +0800
+  Processing by SessionsController#new as HTML
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered sessions/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 98ms (Views: 98.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-08 14:00:29 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-08 14:00:33 +0800
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMBcA4rvuONgAkY/78WPBVOX8mAv76ozUqkQHTwcMok=", "session"=>{"email"=>"me@me.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'me@me.com' LIMIT 1
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 57ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-08 14:00:34 +0800
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered users/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 174ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/undefined" for 127.0.0.1 at 2011-12-08 14:00:36 +0800
+  Processing by UsersController#show as 
+  Parameters: {"id"=>"undefined"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 0 LIMIT 1[0m
+Completed   in 94ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=undefined):
+  app/controllers/users_controller.rb:8:in `show'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 14:00:51 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (155.0ms)
+Completed 200 OK in 295ms (Views: 190.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2011-12-08 14:00:58 +0800
+  Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1[0m
+Rendered posts/_form.html.erb (76.0ms)
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (0.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/edit.html.erb within layouts/application (180.0ms)
+Completed 200 OK in 283ms (Views: 212.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/posts/1" for 127.0.0.1 at 2011-12-08 14:01:16 +0800
+  Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QMBcA4rvuONgAkY/78WPBVOX8mAv76ozUqkQHTwcMok=", "post"=>{"title"=>"MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP", "image_url"=>"", "content"=>"MAKASSAR, 05/06/2011 (Kominfo Newsroom) – per Agustus nanti Provinsi Sulawesi Selatan menguji cobakan pemberlakuan KTP Elektronik (e-KTP) di delapan kabupaten/kota provinsi sulsel. kedelapan kabupaten/kota tersebut adalah Makassar, Luwu timur, Luwu utara, Selayar, Pangkep, Palopo, Bantaeng dan Maros.\r\n\r\nDengan adanya penerapan e-KTP, data kependudukan ganda yang dikarenakan sistem manual dapat dihilangkan. Kepala Biro Pemerintahan Dekonsentrasi dan Kependudukan Provinsi Sulawesi Selatan, Andi Bakti mengatakan ke-delapan daerah tersebut menjadi proritas tahun ini kabupaten/kota lainnya akan menyusul di 2012 atau di tahun 2013 nanti. “Data kependudukan telah di Update oleh semua kabupaten/kota se-Sulsel mulai Oktober hingga November 2010 lalu. Sedangkan penetapan NIK maupun e-KTP sepenuhnya tergantung dari integrasi sistem dari pusat.\r\n\r\nSejauh ini program dari Kemendagri baru ditetapkan di 8 daerah”, ujar Andi Bakti saat ditemu di ruang pola Kantor Gubernur Sulsel,selasa (5/7). Kementrian Dalam Negeri meluncurkan tiga program proritas tahun ini yakni dimulai dari program mempersiapkan database kependudukan, Penetapan Nomor Induk Kependudukan (NIK) dan pembuatan Elektronik KTP. Semua program proritas ini harus selesai di pada tahun 2012 nanti.", "position"=>"mainpost", "typepost"=>"2"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts"."id" FROM "posts" WHERE ("posts"."title" = 'MAKASSAR DAN 7 DAERAH LAIN DI SULSEL TERAPKAN E-KTP') AND ("posts".id <> 1) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE "posts" SET "content" = 'MAKASSAR, 05/06/2011 (Kominfo Newsroom) – per Agustus nanti Provinsi Sulawesi Selatan menguji cobakan pemberlakuan KTP Elektronik (e-KTP) di delapan kabupaten/kota provinsi sulsel. kedelapan kabupaten/kota tersebut adalah Makassar, Luwu timur, Luwu utara, Selayar, Pangkep, Palopo, Bantaeng dan Maros.
+
+Dengan adanya penerapan e-KTP, data kependudukan ganda yang dikarenakan sistem manual dapat dihilangkan. Kepala Biro Pemerintahan Dekonsentrasi dan Kependudukan Provinsi Sulawesi Selatan, Andi Bakti mengatakan ke-delapan daerah tersebut menjadi proritas tahun ini kabupaten/kota lainnya akan menyusul di 2012 atau di tahun 2013 nanti. “Data kependudukan telah di Update oleh semua kabupaten/kota se-Sulsel mulai Oktober hingga November 2010 lalu. Sedangkan penetapan NIK maupun e-KTP sepenuhnya tergantung dari integrasi sistem dari pusat.
+
+Sejauh ini program dari Kemendagri baru ditetapkan di 8 daerah”, ujar Andi Bakti saat ditemu di ruang pola Kantor Gubernur Sulsel,selasa (5/7). Kementrian Dalam Negeri meluncurkan tiga program proritas tahun ini yakni dimulai dari program mempersiapkan database kependudukan, Penetapan Nomor Induk Kependudukan (NIK) dan pembuatan Elektronik KTP. Semua program proritas ini harus selesai di pada tahun 2012 nanti.', "updated_at" = '2011-12-08 06:01:16.592047' WHERE "posts"."id" = 1[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 210ms
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-12-08 14:01:17 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost3.html.erb (1.0ms)
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (117.0ms)
+Completed 200 OK in 186ms (Views: 157.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-08 14:01:26 +0800
+  Processing by StoreController#index as HTML
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+  [1m[35mPost Load (1.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (2.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') LIMIT 1[0m
+Rendered store/_rightsidebar1.html.erb (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC
+Rendered store/_footer.html.erb (2.0ms)
+Rendered store/index.html.erb within layouts/application (144.0ms)
+Completed 200 OK in 196ms (Views: 175.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2011-12-08 14:01:30 +0800
+  Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = 1 LIMIT 1[0m
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost1') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost1.html.erb (3.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'minipost2') ORDER BY updated_at DESC LIMIT 5[0m
+Rendered store/_minipost2.html.erb (1.0ms)
+  [1m[35mPost Load (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE (position = 'minipost3') ORDER BY updated_at DESC LIMIT 5
+Rendered store/_minipost3.html.erb (2.0ms)
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (position = 'mainpost' AND typepost = '2') ORDER BY updated_at DESC[0m
+Rendered store/_footer.html.erb (3.0ms)
+Rendered store/_footer.html.erb (2.0ms)
+Rendered posts/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 300ms (Views: 220.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2011-12-08 14:01:36 +0800
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (2.0ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered store/_minipost1.html.erb (0.0ms)
+Rendered store/_minipost2.html.erb (1.0ms)
+Rendered store/_minipost3.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered store/_footer.html.erb (0.0ms)
+Rendered posts/index.html.erb within layouts/application (136.0ms)
+Completed 200 OK in 266ms (Views: 167.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/undefined" for 127.0.0.1 at 2011-12-08 14:02:00 +0800
+
+ActionController::RoutingError (No route matches "/undefined"):
+  
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)

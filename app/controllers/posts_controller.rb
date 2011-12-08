@@ -1,4 +1,7 @@
 class PostsController < ApplicationController
+  
+  before_filter :authenticate, :only => [:index, :edit, :update]
+  
   # GET /posts
   # GET /posts.xml
   def index
@@ -86,4 +89,11 @@ class PostsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
+    
 end
